@@ -1,0 +1,17 @@
+<!-- Start: Master Component -->
+<section class="h-100 d-flex overflow-hidden">
+    <!-- Start: Side-bar -->
+    <div class="h-100 overflow-hidden">
+        <app-sidebar></app-sidebar>
+    </div>
+    <!-- End: Side-bar -->
+    <main class="bg-secondary d-flex flex-column flex-grow-1 overflow-hidden">
+        <!-- Start: Header -->
+        <app-header></app-header>
+        <!-- End: Header -->
+        <div class="h-100 overflow-hidden p-3">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</section>
+<!-- End: Master Component -->

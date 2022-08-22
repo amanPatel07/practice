@@ -1,0 +1,54 @@
+.sidebar{
+    width: 250px;
+    background-color: $white;
+}
+
+.brand{
+    .brand-icon{
+        font-size: $font-size-xxl;
+        color: $primary;
+    }
+    .brand-title{
+        font-size: $font-size-lg;
+    }
+}
+
+.nav{
+    .nav-item{
+        &-icon{
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+        }
+        &-text{
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+        }
+        &:hover{
+            background-color: $secondary;
+            transition: 0.4s all;
+        }
+    }
+}
+
+.form-nav-icon{
+    width: 30px;
+    height: 30px;
+    padding-top: 0.15rem;
+}
+.check-icon{
+    width: 30px;
+    height: 30px;
+    padding-top: 0.5rem;
+    background-color: $success;
+    border: none;
+    color: $white;
+}
+
+.form-nav{
+    .nav-item:hover{
+        background-color: transparent;
+        .nav-link:hover{
+            color: $dark;
+        }
+    }
+}

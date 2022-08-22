@@ -1,0 +1,40 @@
+import { Injectable } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable, Subject } from 'rxjs';
+
+@Injectable()
+export class StaffingFormPresenterService {
+
+  private _formValue: Subject<any>
+  public formValue$: Observable<any>
+
+  constructor(private fb: FormBuilder) {
+    this._formValue = new Subject();
+    this.formValue$ = new Observable();
+    this.formValue$ = this._formValue.asObservable();
+  }
+
+  public formBuild() {
+    return this.fb.group({
+      developerName: ['', Validators.required],
+      contactNUmber: [],
+      email: [],
+      developerId: [''],
+      designation: [],
+      projectName: [],
+      projectLead: [],
+      moduleLead: [],
+      description: [],
+      frameWork: [],
+      cssFramework: [],
+      joinDate: [],
+      releaseDate: [],
+      status: [],
+      comment: []
+    })
+  }
+
+  public submitForm(formData:FormGroup){
+    this._formValue.next(formData.value);
+  }
+}

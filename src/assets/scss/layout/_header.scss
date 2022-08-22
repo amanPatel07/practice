@@ -1,0 +1,12 @@
+.profile-image{
+    width: 25px;
+    height: 25px;
+}
+.header-nav-item{
+    color: $info;
+    cursor: pointer;
+    &:hover{
+        color: $primary;
+        transition: 0.4s all;
+    }    
+}
