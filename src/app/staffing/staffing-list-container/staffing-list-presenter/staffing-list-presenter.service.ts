@@ -9,10 +9,7 @@ export class StaffingListPresenterService {
   constructor(private overLay: Overlay) { }
 
   public openForm(){
-    console.log('Form Opened')
     const overLayRef = this.overLay.create({
-      // height: '800px',
-      // width: '1200px',
       hasBackdrop: true,
       positionStrategy: this.overLay.position().global().centerHorizontally().centerVertically()
       

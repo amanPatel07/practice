@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { AbstractControl, FormGroup, ValidationErrors, Validator } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { FormGroup, FormGroupName } from '@angular/forms';
+import { FIRST_FORM_TITLE, SECOND_FORM_TITLE, THIRD_FORM_TITLE } from 'src/app/shared/constants';
 import { StaffingFormPresenterService } from '../staffing-form-presenter/staffing-form-presenter.service';
 
 @Component({
@@ -12,34 +13,79 @@ export class StaffingFormPresentationComponent implements OnInit {
 
   @Output() closeOverlay: EventEmitter<Event>;
 
-  public enrollForm: FormGroup
-  private formCount: any
-  public submitted: any
+  public enrollForm: FormGroup;
+  public submitted: any;
+  public title: string;
+  public isDisable: Boolean
 
   constructor(private formService: StaffingFormPresenterService) {
     this.closeOverlay = new EventEmitter();
     this.enrollForm = this.formService.formBuild();
-    this.formCount = 0;
-    this.submitted = false
+    this.submitted = false;
+    this.title = FIRST_FORM_TITLE;
+    this.isDisable = false;
   }
-  
+
   ngOnInit(): void {
-    this.formService.formValue$.subscribe((res) => console.log(res))
+    this.formService.formValue$.subscribe((res) => console.log(res));
+    console.log(this.enrollForm)
   }
 
-  public get getControls(){
-    return this.enrollForm.controls; 
-    // console.log(this.enrollForm.controls)
+  public get getControls() {
+    return this.enrollForm.controls;
   }
 
-  public onCancel(){
+  public onCancel() {
     this.closeOverlay.emit();
   }
 
+  public checkValidity(inputName:any, validiy:any){
+    this.getControls[inputName].valid
+  }
+
+  public next() {
+    this.submitted = !this.enrollForm.valid;
+    let FISRTFORM = this.getControls['firstForm']?.value;
+    let SECONDFORM = this.getControls['secondForm']?.value;
+    let THIRDFORM = this.getControls['thirdForm']?.value;
+    if (!FISRTFORM) {
+      this.getControls['firstForm']?.setValue(true);
+      this.title = SECOND_FORM_TITLE;
+    } else if (FISRTFORM && !SECONDFORM) {
+      this.getControls['secondForm']?.setValue(true);
+      this.title = THIRD_FORM_TITLE;
+    } else if ((FISRTFORM && SECONDFORM) && !THIRDFORM) {
+      this.getControls['thirdForm']?.setValue(true);
+      this.closeOverlay.emit();
+    }
+  }
+
+  public previous() {
+    switch (this.title) {
+      case FIRST_FORM_TITLE:
+        this.getControls['firstForm']?.setValue(null);
+        this.getControls['secondForm']?.setValue(null);
+        this.getControls['thirdForm']?.setValue(null);
+        break;
+      case SECOND_FORM_TITLE:
+        this.getControls['firstForm']?.setValue(null);
+        this.getControls['secondForm']?.setValue(null);
+        this.getControls['thirdForm']?.setValue(null);
+        this.title = FIRST_FORM_TITLE;
+        break;
+      case THIRD_FORM_TITLE:
+        this.getControls['thirdForm']?.setValue(null);
+        this.getControls['secondForm']?.setValue(null);
+        this.getControls['firstForm']?.setValue(true);
+        this.title = SECOND_FORM_TITLE;
+        break;
+      default:
+        break;
+    }
+  }
+
   public submit(){
-    this.submitted = true
-    console.log(this.enrollForm)
-    this.formService.submitForm(this.enrollForm)
+    
   }
 
 }

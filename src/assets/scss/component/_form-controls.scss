@@ -2,8 +2,22 @@
     width: 50%;
 }
 
-.invalid{
-    input{
-        background-color: red;
+
+.form-floating{
+    .validation{
+        display: none;
+    }
+
+    .form-control{
+        &:focus{
+            background: $white;
+        }
+    }
+    
+    &.invalid{
+        .validation{
+            display: block;
+            font-size: $font-size-sm;
+        }
     }
 }

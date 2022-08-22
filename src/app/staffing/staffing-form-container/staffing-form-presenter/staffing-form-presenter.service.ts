@@ -16,21 +16,24 @@ export class StaffingFormPresenterService {
 
   public formBuild() {
     return this.fb.group({
-      developerName: ['', Validators.required],
-      contactNUmber: [],
-      email: [],
-      developerId: [''],
-      designation: [],
-      projectName: [],
-      projectLead: [],
-      moduleLead: [],
-      description: [],
-      frameWork: [],
-      cssFramework: [],
-      joinDate: [],
-      releaseDate: [],
-      status: [],
-      comment: []
+      developerName: [ '', Validators.required ],
+      contactNumber: [ '', Validators.required ],
+      email: [ '', Validators.required ],
+      developerId: [ '', Validators.required ],
+      designation: [ '', Validators.required ],
+      firstForm: [''],
+      projectName: [''],
+      projectLead: [''],
+      moduleLead: [''],
+      description: [''],
+      secondForm: [''],
+      frameWork: [''],
+      cssFramework: [''],
+      joinDate: [''],
+      releaseDate: [''],
+      status: [''],
+      comment: [''],
+      thirdForm: ['']
     })
   }
 

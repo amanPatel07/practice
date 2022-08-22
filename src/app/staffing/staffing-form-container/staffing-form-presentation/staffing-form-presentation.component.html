@@ -11,22 +11,22 @@
             <ul class="nav form-nav py-4 flex-column">
                 <li class="nav-item pb-3">
                     <a class="nav-link p-0 d-flex align-items-center active">
-                        <!-- <span class="form-nav-icon text-center border border-2 border-primary rounded-circle">1</span> -->
-                        <span class="check-icon icon-checkmark text-center rounded-circle"></span>
+                        <span class="form-nav-icon text-center border border-2 border-primary rounded-circle" *ngIf="!getControls['firstForm']?.value">1</span>
+                        <span class="check-icon icon-checkmark text-center rounded-circle" *ngIf="getControls['firstForm']?.value"></span>
                         <p class="nav-item-text ps-3 m-0">Developer Details</p>
                     </a>
                 </li>
                 <li class="nav-item pb-3">
                     <a class="nav-link p-0 d-flex align-items-center active">
-                        <span class="form-nav-icon text-center border border-2 border-primary rounded-circle">2</span>
-                        <!-- <span class="check-icon icon-checkmark text-center rounded-circle"></span> -->
+                        <span class="form-nav-icon text-center border border-2 border-primary rounded-circle" *ngIf="!getControls['secondForm']?.value">2</span>
+                        <span class="check-icon icon-checkmark text-center rounded-circle" *ngIf="getControls['secondForm']?.value"></span>
                         <p class="nav-item-text ps-3 m-0">Project Details</p>
                     </a>
                 </li>
                 <li class="nav-item pb-3">
                     <a class="nav-link p-0 d-flex align-items-center active">
-                        <span class="form-nav-icon text-center border border-2 border-primary rounded-circle">3</span>
-                        <!-- <span class="check-icon icon-checkmark text-center rounded-circle"></span> -->
+                        <span class="form-nav-icon text-center border border-2 border-primary rounded-circle" *ngIf="!getControls['thirdForm']?.value">3</span>
+                        <span class="check-icon icon-checkmark text-center rounded-circle"  *ngIf="getControls['thirdForm']?.value"></span>
                         <p class="nav-item-text ps-3 m-0">Technology and Status</p>
                     </a>
                 </li>
@@ -39,56 +39,74 @@
     </div>
     <!-- End: Form Sidebar -->
     <!-- Start: Form -->
-    <form class="bg-secondary d-flex p-5 flex-column flex-grow-1 overflow-hidden" [formGroup]="enrollForm">
+    <form class="bg-secondary d-flex p-5 flex-column flex-grow-1 overflow-hidden" [formGroup]="enrollForm" #checkForm>
         <p class="d-flex justify-content-end m-0 py-3">
             Having Trouble?
             <a class="text-primary ps-2 fw-bold"> Get Help</a>
         </p>
+        <h5 class="fw-bolder">{{this.title}}</h5>
         <div class="d-flex flex-column flex-grow-1 justify-content-between overflow-auto">
             <!-- Start: Form - 1 -->
-            <div class="form-1">
-                <h6 class="fw-bolder">Developer's Details</h6>
+            <div class="form-1" *ngIf="!getControls['firstForm']?.value">
+                <!-- <h6 class="fw-bolder">Developer's Details</h6> -->
                 <p class="text-muted">Fill the Official Details of the developer to be staffed</p>
                 <div class="row gx-0 m-0 gy-3">
                     <div class="form-floating col-6 pe-3"
-                        [ngClass]="{'invalid': getControls['developerName'].touched}"
+                        [ngClass]="{'invalid': getControls['developerName'].touched  }"
                     >
                         <input formControlName="developerName" type="text" class="form-control" name="developerName"
                             id="developerName" placeholder="Taywin Lannisater">
                         <label for="developerName">Developer's Name</label>
-                        <span *ngIf="getControls['developerName'].touched">
+                        <span class="validation pt-1 text-danger" *ngIf="getControls['developerName']?.errors?.['required']">
                             Developer Name is required.
                         </span>
-                        <span *ngIf="getControls['developerName'].dirty">
-                            Developer
-                        </span>
                     </div>
-                    <div class="form-floating col-6">
-                        <input formControlName="contactNUmber" type="text" class="form-control" name="contact"
+                    <div class="form-floating col-6"
+                        [ngClass]="{'invalid': getControls['contactNumber'].touched  }"
+                    >
+                        <input formControlName="contactNumber" type="text" class="form-control" name="contact"
                             id="contact" placeholder="9876543210">
                         <label for="contact">Contact Number</label>
+                        <span class="validation pt-1 text-danger" *ngIf="getControls['contactNumber']?.errors?.['required']">
+                            Contact Number is required.
+                        </span>
                     </div>
-                    <div class="form-floating col-12">
+                    <div class="form-floating col-12"
+                        [ngClass]="{'invalid': getControls['email'].touched  }"
+                    >
                         <input formControlName="email" type="email" class="form-control" name="email" id="email"
                             placeholder="name@example.com">
                         <label for="email">Email address</label>
+                        <span class="validation pt-1 text-danger" *ngIf="getControls['email']?.errors?.['required']">
+                            Email is required.
+                        </span>
                     </div>
-                    <div class="form-floating col-6 pe-3">
+                    <div class="form-floating col-6 pe-3"
+                        [ngClass]="{'invalid': getControls['developerId'].touched  }"
+                    >
                         <input formControlName="developerId" type="text" class="form-control" name="employeeID"
                             id="employeeID" placeholder="D-123">
                         <label for="employeeID">Employee ID</label>
+                        <span class="validation pt-1 text-danger" *ngIf="getControls['developerId']?.errors?.['required']">
+                            Developer ID is required.
+                        </span>
                     </div>
-                    <div class="form-floating col-6">
+                    <div class="form-floating col-6"
+                        [ngClass]="{'invalid': getControls['designation'].touched  }"
+                    >
                         <input formControlName="designation" type="text" class="form-control" name="designation"
                             id="designation" placeholder="UI Developer">
                         <label for="designation">Designation</label>
+                        <span class="validation pt-1 text-danger" *ngIf="getControls['designation']?.errors?.['required']">
+                            Designation is required.
+                        </span>
                     </div>
                 </div>
             </div>
             <!-- End: Form - 1 -->
             <!-- Start: Form - 2 -->
-            <!-- <div class="form-2">
-                <h5 class="fw-bolder">Project Details</h5>
+            <div class="form-2" *ngIf="getControls['firstForm']?.value && !enrollForm.controls['secondForm']?.value">
+                <!-- <h5 class="fw-bolder">Project Details</h5> -->
                 <p class="text-muted">Fill the Official Details of the Project.</p>
                 <div class="row gx-0 m-0 gy-3">
                     <div class="form-floating col-12">
@@ -108,11 +126,11 @@
                         <label for="projectDescription">Description</label>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!-- End: Form - 2 -->
             <!-- Start: Form - 3 -->
-            <!-- <div class="form-3">
-                <h5 class="fw-bolder">Technolgy To Be used</h5>
+            <div class="form-3" *ngIf="!getControls['thirdForm']?.value && enrollForm.controls['secondForm']?.value">
+                <!-- <h5 class="fw-bolder">Technolgy To Be used</h5> -->
                 <p class="text-muted">Fill the Official Details of the Technolgy to be used in project to develop.</p>
                 <div class="row gx-0 m-0 gy-3">
                     <div class="form-floating col-12">
@@ -140,19 +158,22 @@
                         <label for="comment">Comment</label>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!-- End: Form - 3 -->
             <!-- Start: Next and Previous Button -->
-            <div class="form-steps d-flex justify-content-between">
-                <button type="button" class="btn btn-info text-white d-flex align-items-center">
+            <div class="form-steps d-flex justify-content-between m-1">
+                <button type="button" class="btn btn-info text-white d-flex align-items-center" (click)="previous()">
                     <span class="step-previous-icon d-block icon-circle-down pt-2 m-0"></span>
                     Previous Step
                 </button>
-                <button type="button" class="btn btn-primary d-flex align-items-center" value="Submit"
-                    (click)="submit()">
-                    Next Step
-                    <span class="step-next-icon d-block icon-circle-down pt-2 m-0"></span>
-                </button>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-primary d-flex align-items-center me-3" (click)="next()">
+                        Next Step
+                        <span class="step-next-icon d-block icon-circle-down pt-2 m-0"></span>
+                    </button>
+                    <button type="button" class="btn btn-success text-white" [disabled]="enrollForm.invalid" (click)="submit()">Submit</button>
+                </div>
+                <!-- <button type="button clas">Submit</button> -->
             </div>
             <!-- End: Next and Previous Button -->
         </div>
