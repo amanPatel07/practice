@@ -1,5 +1,5 @@
 
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { StaffingFormPresenterService } from '../../staffing-form-container/staffing-form-presenter/staffing-form-presenter.service';
 import { StaffingListPresenterService } from '../staffing-list-presenter/staffing-list-presenter.service';
 
@@ -11,13 +11,25 @@ import { StaffingListPresenterService } from '../staffing-list-presenter/staffin
 })
 export class StaffingListPresentationComponent implements OnInit {
 
+  @Input() public set staffDetails(value: any | null) {
+    if (value) {
+      this._staffDetails = value
+    }
+  }
+
+  public get staff() {
+    return this._staffDetails;
+  }
+
+  private _staffDetails!: any;
+
   constructor(private formOverlay: StaffingListPresenterService) { }
 
   ngOnInit(): void {
-    this.addNew();
+    // this.formOverlay.openForm();
   }
 
-  public addNew(){
+  public addNew() {
     // this.router.navigate(['staffing/staffing-form'])
     this.formOverlay.openForm();
   }

@@ -1,41 +1,76 @@
-.sidebar{
+.sidebar {
     width: 250px;
-    background-color: $white;
+    background-color: $primary;
+    transition: 0.4s all ease;
 }
 
-.brand{
-    .brand-icon{
+#toggle-sidebar {
+    display: none;
+}
+
+#toggle-sidebar:checked {
+    ~.sidebar {
+        width: 0;
+        transition: 0.4s all ease;
+    }
+}
+
+.toggle-icon{
+    transform: rotate(-90deg);
+    top: 10px;
+    left: 0;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.brand {
+    .brand-icon {
         font-size: $font-size-xxl;
-        color: $primary;
+        color: $white;
     }
-    .brand-title{
+
+    .brand-title {
         font-size: $font-size-lg;
+        color: $white;
     }
 }
 
-.nav{
-    .nav-item{
-        &-icon{
+.nav {
+    .nav-link{
+        cursor: pointer;
+        color: $white;
+        &:hover{
+            color: $primary;
+        }
+    }
+    .nav-item {
+        &-icon {
             font-size: $font-size-md;
             font-weight: $font-weight-bold;
         }
-        &-text{
+
+        &-text {
             font-size: $font-size-base;
             font-weight: $font-weight-bold;
         }
-        &:hover{
-            background-color: $secondary;
+
+        &:hover {
+            background-color: $white;
             transition: 0.4s all;
+            color: $white;
         }
     }
 }
 
-.form-nav-icon{
+.form-nav-icon {
     width: 30px;
     height: 30px;
     padding-top: 0.15rem;
 }
-.check-icon{
+
+.check-icon {
     width: 30px;
     height: 30px;
     padding-top: 0.5rem;
@@ -45,10 +80,14 @@
     transition: 0.4s all ease-in-out;
 }
 
-.form-nav{
-    .nav-item:hover{
+.form-nav {
+    .form-nav-link {
+        color: $dark;
+    }
+    .nav-item:hover {
         background-color: transparent;
-        .nav-link:hover{
+
+        .nav-link:hover {
             color: $dark;
         }
     }

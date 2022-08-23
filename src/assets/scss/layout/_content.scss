@@ -1,6 +1,26 @@
 .overlay-form{
     height: 800px;
-    width: 1400px;
+    width: 350px;
+    @include media-breakpoint-up(sm){
+        height: 800px;
+        width: 550px;
+    }
+    @include media-breakpoint-up(md){
+        height: 800px;
+        width: 750px;
+    }
+    @include media-breakpoint-up(lg){
+        height: 800px;
+        width: 900px;
+    }
+    @include media-breakpoint-up(xl){
+        height: 800px;
+        width: 1200px;
+    }
+    @include media-breakpoint-up(xxl){
+        height: 800px;
+        width: 1400px;
+    }
 }
 .step-previous-icon{
     transform: rotate(90deg);

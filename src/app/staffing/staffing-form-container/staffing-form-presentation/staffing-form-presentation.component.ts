@@ -28,7 +28,8 @@ export class StaffingFormPresentationComponent implements OnInit {
 
   ngOnInit(): void {
     this.formService.formValue$.subscribe((res) => console.log(res));
-    console.log(this.enrollForm)
+    console.log(this.enrollForm);
+    this.btnDisable();
   }
 
   public get getControls() {
@@ -39,8 +40,10 @@ export class StaffingFormPresentationComponent implements OnInit {
     this.closeOverlay.emit();
   }
 
-  public checkValidity(inputName:any, validiy:any){
-    this.getControls[inputName].valid
+  public btnDisable(){
+    for(let key in this.enrollForm.controls){
+      console.log(this.getControls[key].value);
+    }
   }
 
   public next() {

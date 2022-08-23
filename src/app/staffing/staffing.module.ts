@@ -7,7 +7,8 @@ import { StaffingFormPresentationComponent } from './staffing-form-container/sta
 import { StaffingListContainerComponent } from './staffing-list-container/staffing-list-container.component';
 import { StaffingListPresentationComponent } from './staffing-list-container/staffing-list-presentation/staffing-list-presentation.component';
 import { StaffingRoutingModule } from './staffing-routing.module';
-
+import { StaffingService } from './staffing.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { StaffingRoutingModule } from './staffing-routing.module';
     OverlayModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-
+    StaffingService
   ]
 })
 export class StaffingModule { }

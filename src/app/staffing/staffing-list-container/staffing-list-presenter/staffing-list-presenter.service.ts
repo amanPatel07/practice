@@ -12,7 +12,6 @@ export class StaffingListPresenterService {
     const overLayRef = this.overLay.create({
       hasBackdrop: true,
       positionStrategy: this.overLay.position().global().centerHorizontally().centerVertically()
-      
     });
     const overlayComponent = new ComponentPortal(StaffingFormPresentationComponent);
     const componentRef = overLayRef.attach(overlayComponent)
