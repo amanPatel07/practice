@@ -11,44 +11,44 @@
     </div>
     <!-- End: Add new Button -->
     <!-- Start: Listing Table -->
-    <div class="h-100 overflow-hidden">
-        <div class="h-100 overflow-auto">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Lead/PM</th>
-                        <th>Module Lead/PM</th>
-                        <th>Project</th>
-                        <th>Staffing</th>
-                        <th>Frame Work/Tool</th>
-                        <th>CSS FrameWork</th>
-                        <th>Role</th>
-                        <th>Joining Date</th>
-                        <th>Spend Hours</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+    <div class="h-100 overflow-auto">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Lead/PM</th>
+                    <th>Module Lead/PM</th>
+                    <th>Project</th>
+                    <th>Staffing</th>
+                    <th>Frame Work/Tool</th>
+                    <th>CSS FrameWork</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Joining Date</th>
+                    <th>Release Date</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
 
-                <tbody>
-                    <tr *ngFor="let details of staff, let i = index">
-                        <td class="rounded">{{ i+1 }}</td>
-                        <td>{{ details.developerName }}</td>
-                        <td>{{ details.projectLead }}</td>
-                        <td>{{ details.moduleLead }}</td>
-                        <td>{{ details.project }}</td>
-                        <td>Shadow</td>
-                        <td>{{ details.frameWork }}</td>
-                        <td>{{ details.cssFramework }}</td>
-                        <td>{{ details.designation }}</td>
-                        <td>{{ details.joinDate }}</td>
-                        <td>{{ details.releaseDate }}</td>
-                        <td class="rounded">{{ details.status }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <tbody>
+                <tr *ngFor="let details of staff, let i = index">
+                    <td class="rounded">{{ i+1 }}</td>
+                    <td>{{ details.developerName }}</td>
+                    <td>{{ details.projectLead }}</td>
+                    <td>{{ details.moduleLead }}</td>
+                    <td>{{ details.project }}</td>
+                    <td>{{ details.staffing }}</td>
+                    <td>{{ details.frameWork }}</td>
+                    <td>{{ details.cssFramework }}</td>
+                    <td>{{ details.designation }}</td>
+                    <td>{{ details.status }}</td>
+                    <td>{{ details.joinDate }}</td>
+                    <td>{{ details.releaseDate }}</td>
+                    <td class="rounded">{{ details.comment }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!-- End: Listing Table -->
 </div>

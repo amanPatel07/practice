@@ -29,7 +29,6 @@ export class StaffingFormPresentationComponent implements OnInit {
   ngOnInit(): void {
     this.formService.formValue$.subscribe((res) => console.log(res));
     console.log(this.enrollForm);
-    this.btnDisable();
   }
 
   public get getControls() {
@@ -46,21 +45,27 @@ export class StaffingFormPresentationComponent implements OnInit {
     }
   }
 
-  public next() {
-    this.submitted = !this.enrollForm.valid;
-    let FISRTFORM = this.getControls['firstForm']?.value;
-    let SECONDFORM = this.getControls['secondForm']?.value;
-    let THIRDFORM = this.getControls['thirdForm']?.value;
-    if (!FISRTFORM) {
-      this.getControls['firstForm']?.setValue(true);
-      this.title = SECOND_FORM_TITLE;
-    } else if (FISRTFORM && !SECONDFORM) {
-      this.getControls['secondForm']?.setValue(true);
-      this.title = THIRD_FORM_TITLE;
-    } else if ((FISRTFORM && SECONDFORM) && !THIRDFORM) {
-      this.getControls['thirdForm']?.setValue(true);
-      this.closeOverlay.emit();
+  public next(title:any, formControls:any) {
+    let valid;
+    this.formService.checkValidity(title, formControls)
+    this.formService.validForm$.subscribe(res=> valid = res)
+    if(valid){
+      
     }
+    // this.submitted = !this.enrollForm.valid;
+    // let FISRTFORM = this.getControls['firstForm']?.value;
+    // let SECONDFORM = this.getControls['secondForm']?.value;
+    // let THIRDFORM = this.getControls['thirdForm']?.value;
+    // if (!FISRTFORM) {
+    //   this.getControls['firstForm']?.setValue(true);
+    //   this.title = SECOND_FORM_TITLE;
+    // } else if (FISRTFORM && !SECONDFORM) {
+    //   this.getControls['secondForm']?.setValue(true);
+    //   this.title = THIRD_FORM_TITLE;
+    // } else if ((FISRTFORM && SECONDFORM) && !THIRDFORM) {
+    //   this.getControls['thirdForm']?.setValue(true);
+    //   this.closeOverlay.emit();
+    // }
   }
 
   public previous() {
@@ -88,7 +93,7 @@ export class StaffingFormPresentationComponent implements OnInit {
   }
 
   public submit(){
-    
+    console.log();
   }
 
 }

@@ -1,7 +1,11 @@
 .sidebar {
     width: 250px;
-    background-color: $primary;
     transition: 0.4s all ease;
+
+    @include media-breakpoint-down(md) {
+        position: absolute;
+        z-index: 10;
+    }
 }
 
 #toggle-sidebar {
@@ -15,15 +19,17 @@
     }
 }
 
-.toggle-icon{
+.toggle-icon {
     transform: rotate(-90deg);
     top: 10px;
     left: 0;
-    border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
     z-index: 10;
     cursor: pointer;
 }
+
+
 
 .brand {
     .brand-icon {
@@ -38,13 +44,15 @@
 }
 
 .nav {
-    .nav-link{
+    .nav-link {
         cursor: pointer;
         color: $white;
-        &:hover{
+
+        &:hover {
             color: $primary;
         }
     }
+
     .nav-item {
         &-icon {
             font-size: $font-size-md;
@@ -65,14 +73,14 @@
 }
 
 .form-nav-icon {
-    width: 30px;
-    height: 30px;
+    width: $form-nav-icon-width;
+    height: $form-nav-icon-height;
     padding-top: 0.15rem;
 }
 
 .check-icon {
-    width: 30px;
-    height: 30px;
+    width: $form-nav-check-icon-width;
+    height: $form-nav-check-icon-height;
     padding-top: 0.5rem;
     background-color: $success;
     border: none;
@@ -84,6 +92,7 @@
     .form-nav-link {
         color: $dark;
     }
+
     .nav-item:hover {
         background-color: transparent;
 

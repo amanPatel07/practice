@@ -127,6 +127,10 @@
                         <input formControlName="description" type="text" class="form-control" name="projectDescription" id="projectDescription" placeholder="xyz">
                         <label for="projectDescription">Description</label>
                     </div>
+                    <div class="form-floating col-12 col-md-6 pe-md-3">
+                        <input formControlName="staffing" type="text" class="form-control" name="projectstaffing" id="projectstaffing" placeholder="xyz">
+                        <label for="projectstaffing">Staffing</label>
+                    </div>
                 </div>
             </div>
             <!-- End: Form - 2 -->
@@ -172,7 +176,8 @@
                 </button>
                 <div class="d-flex flex-grow-1 justify-content-end">
                     <button type="button" class="btn btn-primary d-flex align-items-center me-3 px-4" 
-                        *ngIf="!(!getControls['thirdForm']?.value && enrollForm.controls['secondForm']?.value)" (click)="next()"
+                        *ngIf="!(!getControls['thirdForm']?.value && enrollForm.controls['secondForm']?.value)"
+                         (click)="next(this.title, getControls)"
                         >
                         Next Step
                         <span class="step-next-icon d-block icon-circle-down pt-2 m-0"></span>
