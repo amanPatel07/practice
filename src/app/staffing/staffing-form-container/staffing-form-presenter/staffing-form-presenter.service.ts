@@ -55,16 +55,18 @@ export class StaffingFormPresenterService {
     if (title === FIRST_FORM_TITLE) {
       firstFormValid = this.validateFirstForm(formControlNames, formControl);
       this.validForm.next(firstFormValid);
-      // return firstFormValid;
+      return 
     }
     else if(title === SECOND_FORM_TITLE){
       secondFormValid = this.validateSecondForm(formControlNames, formControl);
       this.validForm.next(secondFormValid);
+      return;
     }
-    else if(title === THIRD_FORM_TITLE){
-      thirdFormValid = this.validateThirdForm(formControlNames, formControl)
-      this.validForm.next(thirdFormValid)
-    }
+    // else if(title === THIRD_FORM_TITLE){
+    //   thirdFormValid = this.validateThirdForm(formControlNames, formControl)
+    //   this.validForm.next(thirdFormValid);
+    //   return;
+    // }
   }
 
   public getKeys(formControl: any) {
@@ -105,20 +107,20 @@ export class StaffingFormPresenterService {
     return false
   }
 
-  public validateThirdForm(formControlNames: any, formControl: any) {
-    let frameWork = formControl['frameWork'].status;
-    let cssFramework = formControl['cssFramework'].status;
-    let joinDate = formControl['joinDate'].status;
-    let releaseDate = formControl['releaseDate'].status;
-    let status = formControl['status'].status;
-    let comment = formControl['comment'].status;
-    for (let i = 0; i < formControlNames.length; i++) {
-      if ((frameWork && cssFramework && joinDate && releaseDate && status && comment) === 'VALID') {
-        return true
-      }
-    }
-    return false
-  }
+  // public validateThirdForm(formControlNames: any, formControl: any) {
+  //   let frameWork = formControl['frameWork'].status;
+  //   let cssFramework = formControl['cssFramework'].status;
+  //   let joinDate = formControl['joinDate'].status;
+  //   let releaseDate = formControl['releaseDate'].status;
+  //   let status = formControl['status'].status;
+  //   let comment = formControl['comment'].status;
+  //   for (let i = 0; i < formControlNames.length; i++) {
+  //     if ((frameWork && cssFramework && joinDate && releaseDate && status && comment) === 'VALID') {
+  //       return true
+  //     }
+  //   }
+  //   return false
+  // }
 
   public submitForm(formData: FormGroup) {
     this._formValue.next(formData.value);

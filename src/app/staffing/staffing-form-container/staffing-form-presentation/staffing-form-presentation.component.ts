@@ -16,19 +16,20 @@ export class StaffingFormPresentationComponent implements OnInit {
   public enrollForm: FormGroup;
   public submitted: any;
   public title: string;
-  public isDisable: Boolean
+  public isformValid: Boolean
 
   constructor(private formService: StaffingFormPresenterService) {
     this.closeOverlay = new EventEmitter();
     this.enrollForm = this.formService.formBuild();
     this.submitted = false;
     this.title = FIRST_FORM_TITLE;
-    this.isDisable = false;
+    this.isformValid = false;
   }
 
   ngOnInit(): void {
-    this.formService.formValue$.subscribe((res) => console.log(res));
-    console.log(this.enrollForm);
+    this.formService.validForm$.subscribe((res) => {
+      this.isformValid = res
+    })
   }
 
   public get getControls() {
@@ -39,33 +40,24 @@ export class StaffingFormPresentationComponent implements OnInit {
     this.closeOverlay.emit();
   }
 
-  public btnDisable(){
-    for(let key in this.enrollForm.controls){
-      console.log(this.getControls[key].value);
-    }
-  }
-
-  public next(title:any, formControls:any) {
-    let valid;
+  public next(title: any, formControls: any) {
     this.formService.checkValidity(title, formControls)
-    this.formService.validForm$.subscribe(res=> valid = res)
-    if(valid){
-      
+    if (this.isformValid) {
+      this.submitted = !this.enrollForm.valid;
+      let FISRTFORM = this.getControls['firstForm']?.value;
+      let SECONDFORM = this.getControls['secondForm']?.value;
+      let THIRDFORM = this.getControls['thirdForm']?.value;
+      if (!FISRTFORM) {
+        this.getControls['firstForm']?.setValue(true);
+        this.title = SECOND_FORM_TITLE;
+      } else if (FISRTFORM && !SECONDFORM) {
+        this.getControls['secondForm']?.setValue(true);
+        this.title = THIRD_FORM_TITLE;
+      } else if ((FISRTFORM && SECONDFORM) && !THIRDFORM) {
+        this.getControls['thirdForm']?.setValue(true);
+        this.closeOverlay.emit();
+      }
     }
-    // this.submitted = !this.enrollForm.valid;
-    // let FISRTFORM = this.getControls['firstForm']?.value;
-    // let SECONDFORM = this.getControls['secondForm']?.value;
-    // let THIRDFORM = this.getControls['thirdForm']?.value;
-    // if (!FISRTFORM) {
-    //   this.getControls['firstForm']?.setValue(true);
-    //   this.title = SECOND_FORM_TITLE;
-    // } else if (FISRTFORM && !SECONDFORM) {
-    //   this.getControls['secondForm']?.setValue(true);
-    //   this.title = THIRD_FORM_TITLE;
-    // } else if ((FISRTFORM && SECONDFORM) && !THIRDFORM) {
-    //   this.getControls['thirdForm']?.setValue(true);
-    //   this.closeOverlay.emit();
-    // }
   }
 
   public previous() {
@@ -92,7 +84,7 @@ export class StaffingFormPresentationComponent implements OnInit {
     }
   }
 
-  public submit(){
+  public submit() {
     console.log();
   }
 
