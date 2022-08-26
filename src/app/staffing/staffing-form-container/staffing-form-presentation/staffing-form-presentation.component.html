@@ -175,6 +175,7 @@
                     Previous Step
                 </button>
                 <div class="d-flex flex-grow-1 justify-content-end">
+                    <button type="button" class="btn btn-white me-2 border-primary" (click)="reset()">Reset</button>
                     <button type="button" class="btn btn-primary d-flex align-items-center me-3 px-4" 
                         *ngIf="!(!getControls['thirdForm']?.value && enrollForm.controls['secondForm']?.value)"
                          (click)="next(this.title, getControls)"

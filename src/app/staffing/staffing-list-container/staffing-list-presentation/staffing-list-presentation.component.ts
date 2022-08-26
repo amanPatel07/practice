@@ -30,7 +30,6 @@ export class StaffingListPresentationComponent implements OnInit {
   }
 
   public addNew() {
-    // this.router.navigate(['staffing/staffing-form'])
     this.formOverlay.openForm();
   }
 

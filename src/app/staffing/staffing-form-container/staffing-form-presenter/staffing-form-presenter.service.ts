@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first, Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
+import { Subject } from 'rxjs/internal/Subject';
 import { FIRST_FORM_TITLE, SECOND_FORM_TITLE, THIRD_FORM_TITLE } from 'src/app/shared/constants';
 
 @Injectable()
@@ -8,7 +9,7 @@ export class StaffingFormPresenterService {
 
   private _formValue: Subject<any>
   public formValue$: Observable<any>
-  public formGroupObj!: any
+  public formGroupObj!: FormGroup
 
   private validForm: Subject<any>;
   public validForm$: Observable<any>;

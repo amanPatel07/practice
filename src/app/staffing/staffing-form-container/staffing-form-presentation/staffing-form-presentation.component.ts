@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { FormGroup, FormGroupName } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { FIRST_FORM_TITLE, SECOND_FORM_TITLE, THIRD_FORM_TITLE } from 'src/app/shared/constants';
 import { StaffingFormPresenterService } from '../staffing-form-presenter/staffing-form-presenter.service';
 
@@ -16,7 +16,8 @@ export class StaffingFormPresentationComponent implements OnInit {
   public enrollForm: FormGroup;
   public submitted: any;
   public title: string;
-  public isformValid: Boolean
+  public isformValid: Boolean;
+  public isFormSubmiited: Boolean;
 
   constructor(private formService: StaffingFormPresenterService) {
     this.closeOverlay = new EventEmitter();
@@ -24,6 +25,7 @@ export class StaffingFormPresentationComponent implements OnInit {
     this.submitted = false;
     this.title = FIRST_FORM_TITLE;
     this.isformValid = false;
+    this.isFormSubmiited = true;
   }
 
   ngOnInit(): void {
@@ -41,7 +43,7 @@ export class StaffingFormPresentationComponent implements OnInit {
   }
 
   public next(title: any, formControls: any) {
-    this.formService.checkValidity(title, formControls)
+    this.formService.checkValidity(title, formControls);
     if (this.isformValid) {
       this.submitted = !this.enrollForm.valid;
       let FISRTFORM = this.getControls['firstForm']?.value;
@@ -86,6 +88,10 @@ export class StaffingFormPresentationComponent implements OnInit {
 
   public submit() {
     console.log();
+  }
+
+  public reset(){
+    this.enrollForm.reset();
   }
 
 }

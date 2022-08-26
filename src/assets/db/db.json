@@ -1,320 +1,211 @@
 {
-    "staffDetails": [
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "staffing": "shadow",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        },
-        {
-            "id": 1,
-            "developerName": "Abhishek",
-            "contacNumber": 9876543210,
-            "emailAddress": "abhi@gmail.com",
-            "employeeId": 1,
-            "designation": "UI",
-            "project": "GTR",
-            "projectLead": "Shyam",
-            "moduleLead": "Ram",
-            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "frameWork": "Angular",
-            "cssFramework": "Bootstrap",
-            "joinDate": "21-4-2000",
-            "releaseDate": "21-4-2000",
-            "status": "Developing",
-            "comment": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-            "firstForm": true,
-            "secondForm": true,
-            "thirdForm": true
-        }
-    ]
+  "departments":[
+      {
+          "departmentId":1,
+          "departmentName": "Frontend",
+          "employee": [
+              {
+                  "employeeId": 1,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 2,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 3,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 4,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 5,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              }
+          ]
+      },
+      {
+          "departmentId":2,
+          "departmentName": "Backend",
+          "employee": [
+              {
+                  "employeeId": 1,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 2,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 3,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 4,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 5,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              }
+          ]
+      },
+      {
+          "departmentId":3,
+          "departmentName": "Database",
+          "employee": [
+              {
+                  "employeeId": 1,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 2,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 3,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 4,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 5,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              }
+          ]
+      },
+      {
+          "departmentId":1,
+          "departmentName": "QA",
+          "employee": [
+              {
+                  "employeeId": 1,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 2,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 3,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 4,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              },
+              {
+                  "employeeId": 5,
+                  "employeeName": "Rahul",
+                  "designation": "Trainee",
+                  "staffProjectId": [1, 2, 3, 4]
+              }
+          ]
+      }
+  ],
+  "projects":[
+      {
+          "projectId":1,
+          "projectName": "GTR",
+          "projectStatus": "New",
+          "projectDesc": "Lorem",
+          "projectLeadId": 1
+      },
+      {
+          "projectId":2,
+          "projectName": "GTR",
+          "projectStatus": "New",
+          "projectDesc": "Lorem",
+          "projectLeadId": 1
+      },
+      {
+          "projectId":3,
+          "projectName": "GTR",
+          "projectStatus": "New",
+          "projectDesc": "Lorem",
+          "projectLeadId": 1
+      },
+      {
+          "projectId":4,
+          "projectName": "GTR",
+          "projectStatus": "New",
+          "projectDesc": "Lorem",
+          "projectLeadId": 1
+      },
+      {
+          "projectId":5,
+          "projectName": "GTR",
+          "projectStatus": "New",
+          "projectDesc": "Lorem",
+          "projectLeadId": 1
+      }
+  ],
+  "pmList":[
+      {
+          "pmId": 1,
+          "pmName": "Ankur",
+          "pmContact": "pm.lead@mail.com",
+          "staffedProjectId": [1, 2, 3, 4]
+      },
+      {
+          "pmId": 2,
+          "pmName": "Ankur",
+          "pmContact": "pm.lead@mail.com",
+          "staffedProjectId": [1, 2, 3, 4]
+      },
+      {
+          "pmId": 3,
+          "pmName": "Ankur",
+          "pmContact": "pm.lead@mail.com",
+          "staffedProjectId": [1, 2, 3, 4]
+      },
+      {
+          "pmId": 4,
+          "pmName": "Ankur",
+          "pmContact": "pm.lead@mail.com",
+          "staffedProjectId": [1, 2, 3, 4]
+      }
+  ]
 }
