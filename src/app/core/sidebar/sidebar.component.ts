@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  public isDropDownOpen: Boolean;
+
+  constructor() {
+    this.isDropDownOpen = false;
+  }
 
   ngOnInit(): void {
+  }
+
+  public dropDown() {
+    this.isDropDownOpen = !this.isDropDownOpen
   }
 
 }

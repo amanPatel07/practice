@@ -15,7 +15,7 @@ export class StaffingListContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.staffDetails$ = this._service.getStaffDetails();
+    // this.staffDetails$ = this._service.getStaffDetails();
   }
 
 

@@ -4,6 +4,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { MasterComponent } from './master/master.component';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
   ],
   exports:[
     MasterComponent,

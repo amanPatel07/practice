@@ -24,7 +24,11 @@ export class StaffingFormPresenterService {
     this.validForm$ = this.validForm.asObservable();
 
   }
-
+  /**
+   * @method formBuild
+   * @description The form group with the form controls
+   * @returns Form Group
+   */
   public formBuild() {
     this.formGroupObj = this.fb.group({
       developerName: ['', Validators.required],
@@ -63,11 +67,11 @@ export class StaffingFormPresenterService {
       this.validForm.next(secondFormValid);
       return;
     }
-    // else if(title === THIRD_FORM_TITLE){
-    //   thirdFormValid = this.validateThirdForm(formControlNames, formControl)
-    //   this.validForm.next(thirdFormValid);
-    //   return;
-    // }
+    else if(title === THIRD_FORM_TITLE){
+      thirdFormValid = this.validateThirdForm(formControlNames, formControl)
+      this.validForm.next(thirdFormValid);
+      return;
+    }
   }
 
   public getKeys(formControl: any) {
@@ -108,20 +112,20 @@ export class StaffingFormPresenterService {
     return false
   }
 
-  // public validateThirdForm(formControlNames: any, formControl: any) {
-  //   let frameWork = formControl['frameWork'].status;
-  //   let cssFramework = formControl['cssFramework'].status;
-  //   let joinDate = formControl['joinDate'].status;
-  //   let releaseDate = formControl['releaseDate'].status;
-  //   let status = formControl['status'].status;
-  //   let comment = formControl['comment'].status;
-  //   for (let i = 0; i < formControlNames.length; i++) {
-  //     if ((frameWork && cssFramework && joinDate && releaseDate && status && comment) === 'VALID') {
-  //       return true
-  //     }
-  //   }
-  //   return false
-  // }
+  public validateThirdForm(formControlNames: any, formControl: any) {
+    let frameWork = formControl['frameWork'].status;
+    let cssFramework = formControl['cssFramework'].status;
+    let joinDate = formControl['joinDate'].status;
+    let releaseDate = formControl['releaseDate'].status;
+    let status = formControl['status'].status;
+    let comment = formControl['comment'].status;
+    for (let i = 0; i < formControlNames.length; i++) {
+      if ((frameWork && cssFramework && joinDate && releaseDate && status && comment) === 'VALID') {
+        return true
+      }
+    }
+    return false
+  }
 
   public submitForm(formData: FormGroup) {
     this._formValue.next(formData.value);

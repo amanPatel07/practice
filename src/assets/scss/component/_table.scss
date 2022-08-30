@@ -1,19 +1,23 @@
+// .table{
+//     width: 100%;
+//     border-collapse: collapse;
+//     th{
+//         position: sticky;
+//         top: 0;
+//         font-size: $font-size-sm;
+//         background-color: $secondary;
+//     }
+//     tr{
+//         background-color: $white;
+//     }
+//     th,td{
+//         text-align: center;
+//     }
+//     td{
+//         border-bottom: 5px solid $secondary;
+//     }
+// }
+
 .table{
-    width: 100%;
-    border-collapse: collapse;
-    th{
-        position: sticky;
-        top: 0;
-        font-size: $font-size-sm;
-        background-color: $secondary;
-    }
-    tr{
-        background-color: $white;
-    }
-    th,td{
-        text-align: center;
-    }
-    td{
-        border-bottom: 5px solid $secondary;
-    }
+    table-layout: fixed;
 }

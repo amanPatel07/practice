@@ -7,22 +7,51 @@
     <div class="py-3">
         <!-- Start: Sidebar Navbar -->
         <ul class="nav flex-column p-3">
-            <li class="nav-item mb-2">
-                <a class="nav-link d-flex align-items-center ps-2 active">
+            <li class="nav-item mb-2" routerLink="staff" routerLinkActive="active">
+                <a class="nav-link active d-flex align-items-center ps-2" >
                     <span class="nav-item-icon icon-ungroup"></span>
-                    <p class="nav-item-text ps-3 m-0">Staffing</p>
+                    <p class="nav-item-text ps-3 m-0">Staff</p>
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item" (click)="dropDown()" routerLink="employee"  routerLinkActive="active">
                 <a class="nav-link d-flex align-items-center ps-2">
                     <span class="nav-item-icon icon-users"></span>
-                    <p class="nav-item-text ps-3 m-0">Users</p>
+                    <p class="nav-item-text ps-3 m-0">Employee</p>
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            <!-- Start: Drop Down menu -->
+            <ul class="nav dropDown flex-column" *ngIf="this.isDropDownOpen">
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link">
+                        <p class="nav-item-text ps-5 m-0">Frontend</p>
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link">
+                        <p class="nav-item-text ps-5 m-0">Backend</p>
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link">
+                        <p class="nav-item-text ps-5 m-0">QA</p>
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link">
+                        <p class="nav-item-text ps-5 m-0">Data Base</p>
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link">
+                        <p class="nav-item-text ps-5 m-0">BA</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- End: Drop Down Menu -->
+            <li class="nav-item my-2">
                 <a class="nav-link d-flex align-items-center ps-2">
-                    <span class="nav-item-icon icon-pie-chart"></span>
-                    <p class="nav-item-text ps-3 m-0">Stats</p>
+                    <span class="nav-item-icon icon-credit-card"></span>
+                    <p class="nav-item-text ps-3 m-0">Project</p>
                 </a>
             </li>
         </ul>

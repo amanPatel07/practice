@@ -9,8 +9,9 @@ const routes: Routes = [
   {
     path:'', component:MasterComponent,
     children:[
-      { path:'', redirectTo:'staffing', pathMatch:'full' },
-      { path: 'staffing', loadChildren: () => import('./staffing/staffing.module').then(m => m.StaffingModule) }
+      { path:'', redirectTo:'staff', pathMatch:'full' },
+      { path: 'staff', loadChildren: () => import('./staffing/staffing.module').then(m => m.StaffingModule) },
+      { path: 'employee', loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule) },
     ]
   },
 ];
