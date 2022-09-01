@@ -1,1 +1,6 @@
-<app-employee-list-presentation></app-employee-list-presentation>
+<app-employee-list-presentation
+    [departmentId]="deptid$ | async"
+    [employeeList]="employeeList$ | async"
+    (getEmployeeById)="getEmployeeById($event)"
+>
+</app-employee-list-presentation>

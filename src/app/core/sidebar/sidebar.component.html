@@ -21,29 +21,9 @@
             </li>
             <!-- Start: Drop Down menu -->
             <ul class="nav dropDown flex-column" *ngIf="this.isDropDownOpen">
-                <li class="nav-item text-nowrap">
+                <li class="nav-item text-nowrap" *ngFor="let dept of this.departmentList" (click)="departmentId(dept.id)">
                     <a class="nav-link">
-                        <p class="nav-item-text ps-5 m-0">Frontend</p>
-                    </a>
-                </li>
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link">
-                        <p class="nav-item-text ps-5 m-0">Backend</p>
-                    </a>
-                </li>
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link">
-                        <p class="nav-item-text ps-5 m-0">QA</p>
-                    </a>
-                </li>
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link">
-                        <p class="nav-item-text ps-5 m-0">Data Base</p>
-                    </a>
-                </li>
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link">
-                        <p class="nav-item-text ps-5 m-0">BA</p>
+                        <p class="nav-item-text ps-5 m-0">{{ dept.departmentName }}</p>
                     </a>
                 </li>
             </ul>

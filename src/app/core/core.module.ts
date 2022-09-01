@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { MasterComponent } from './master/master.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
+import { EmployeeService } from './services/employee.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,12 +19,16 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   exports:[
     MasterComponent,
     SidebarComponent,
     HeaderComponent
+  ],
+  providers: [
+    EmployeeService
   ]
 })
 export class CoreModule { }

@@ -87,7 +87,6 @@ export class StaffingFormPresentationComponent implements OnInit {
   }
 
   public submit() {
-    console.log();
   }
 
   public reset(){
