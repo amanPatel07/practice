@@ -1,432 +1,1035 @@
 {
-  "departments":[
-      {
-          "id":1,
-          "departmentName": "Frontend",
-          "employee": [
-              {
-                  "employeeId": 1,
-                  "employeeName": "Rahul",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 2,
-                  "employeeName": "Rahul",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 3,
-                  "employeeName": "Rahul",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 4,
-                  "employeeName": "Rahul",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 5,
-                  "employeeName": "Rahul",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              }
-          ]
-      },
-      {
-          "id":2,
-          "departmentName": "Backend",
-          "employee": [
-              {
-                  "employeeId": 1,
-                  "employeeName": "Harsh",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 2,
-                  "employeeName": "Harsh",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 3,
-                  "employeeName": "Harsh",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 4,
-                  "employeeName": "Harsh",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 5,
-                  "employeeName": "Harsh",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              }
-          ]
-      },
-      {
-          "id":3,
-          "departmentName": "Database",
-          "employee": [
-              {
-                  "employeeId": 1,
-                  "employeeName": "Aayush",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 2,
-                  "employeeName": "Aayush",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 3,
-                  "employeeName": "Aayush",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 4,
-                  "employeeName": "Aayush",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 5,
-                  "employeeName": "Aayush",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              }
-          ]
-      },
-      {
-          "id":4,
-          "departmentName": "QA",
-          "employee": [
-              {
-                  "employeeId": 1,
-                  "employeeName": "Shivam",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 2,
-                  "employeeName": "Shivam",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 3,
-                  "employeeName": "Shivam",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 4,
-                  "employeeName": "Shivam",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 5,
-                  "employeeName": "Shivam",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              }
-          ]
-      },
-      {
-        "id":5,
-          "departmentName": "BA",
-          "employee": [
-              {
-                  "employeeId": 1,
-                  "employeeName": "Mayur",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 2,
-                  "employeeName": "Mayur",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 3,
-                  "employeeName": "Mayur",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 4,
-                  "employeeName": "Mayur",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              },
-              {
-                  "employeeId": 5,
-                  "employeeName": "Mayur",
-                  "designation": "Trainee",
-                  "staffProjectId": [1, 2, 3, 4],
-                  "staffedModule": [1,2,3],
-                  "isModuleLead": null,
-                  "contact": 9876543210,
-                  "email": "employee@mail.com" 
-              }
-          ]
-      }
-  ],
-  "projects":[
-      {
-          "projectId":1,
-          "projectName": "GTR",
-          "projectStatus": "New",
-          "projectDesc": "Lorem",
-          "projectLeadId": 1,
-          "projectModules": [
-            {
-                "moduleId": 1,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 2,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 3,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1]
-            }
-          ]
-      },
-      {
-          "projectId":2,
-          "projectName": "GTR",
-          "projectStatus": "New",
-          "projectDesc": "Lorem",
-          "projectLeadId": 1,
-          "projectModules": [
-            {
-                "moduleId": 1,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 2,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 3,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            }
-          ]
-      },
-      {
-          "projectId":3,
-          "projectName": "GTR",
-          "projectStatus": "New",
-          "projectDesc": "Lorem",
-          "projectLeadId": 1,
-          "projectModules": [
-            {
-                "moduleId": 1,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 2,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 3,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            }
-          ]
-      },
-      {
-          "projectId":4,
-          "projectName": "GTR",
-          "projectStatus": "New",
-          "projectDesc": "Lorem",
-          "projectLeadId": 1,
-          "projectModules": [
-            {
-                "moduleId": 1,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 2,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 3,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            }
-          ]
-      },
-      {
-          "projectId":5,
-          "projectName": "GTR",
-          "projectStatus": "New",
-          "projectDesc": "Lorem",
-          "projectLeadId": 1,
-          "projectModules": [
-            {
-                "moduleId": 1,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 2,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            },
-            {
-                "moduleId": 3,
-                "projectModuleName": "GTR-Product",
-                "moduleLeadId": [1,2,3]
-            }
-          ]
-      }
-  ],
-  "pmList":[
-      {
-          "pmId": 1,
-          "pmName": "Ankur",
-          "pmContact": "pm.lead@mail.com",
-          "staffedProjectId": [1, 2, 3, 4]
-      },
-      {
-          "pmId": 2,
-          "pmName": "Ankur",
-          "pmContact": "pm.lead@mail.com",
-          "staffedProjectId": [1, 2, 3, 4]
-      },
-      {
-          "pmId": 3,
-          "pmName": "Ankur",
-          "pmContact": "pm.lead@mail.com",
-          "staffedProjectId": [1, 2, 3, 4]
-      },
-      {
-          "pmId": 4,
-          "pmName": "Ankur",
-          "pmContact": "pm.lead@mail.com",
-          "staffedProjectId": [1, 2, 3, 4]
-      }
-  ]
+    "departments": [
+        {
+            "id": 1,
+            "departmentName": "Frontend",
+            "employee": [
+                {
+                    "employeeId": 1,
+                    "employeeName": "Rahul",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 2,
+                    "employeeName": "Rahul",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 3,
+                    "employeeName": "Rahul",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 4,
+                    "employeeName": "Rahul",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 5,
+                    "employeeName": "Rahul",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "departmentName": "Backend",
+            "employee": [
+                {
+                    "employeeId": 1,
+                    "employeeName": "Harsh",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 2,
+                    "employeeName": "Harsh",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 3,
+                    "employeeName": "Harsh",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 4,
+                    "employeeName": "Harsh",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 5,
+                    "employeeName": "Harsh",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "departmentName": "Database",
+            "employee": [
+                {
+                    "employeeId": 1,
+                    "employeeName": "Aayush",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 2,
+                    "employeeName": "Aayush",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 3,
+                    "employeeName": "Aayush",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 4,
+                    "employeeName": "Aayush",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 5,
+                    "employeeName": "Aayush",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "departmentName": "QA",
+            "employee": [
+                {
+                    "employeeId": 1,
+                    "employeeName": "Shivam",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 2,
+                    "employeeName": "Shivam",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 3,
+                    "employeeName": "Shivam",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 4,
+                    "employeeName": "Shivam",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 5,
+                    "employeeName": "Shivam",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "departmentName": "BA",
+            "employee": [
+                {
+                    "employeeId": 1,
+                    "employeeName": "Mayur",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 2,
+                    "employeeName": "Mayur",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 3,
+                    "employeeName": "Mayur",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 4,
+                    "employeeName": "Mayur",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                },
+                {
+                    "employeeId": 5,
+                    "employeeName": "Mayur",
+                    "designation": "Trainee",
+                    "staffProjectId": [
+                        {
+                            "projectId": 1,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 2,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 3,
+                            "hourSpend": 10
+                        },
+                        {
+                            "projectId": 4,
+                            "hourSpend": 10
+                        }
+                    ],
+                    "staffedModule": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "isModuleLead": null,
+                    "contact": 9876543210,
+                    "email": "employee@mail.com"
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "projectId": 1,
+            "projectName": "GTR",
+            "projectStatus": "New",
+            "projectDesc": "Lorem",
+            "projectLeadId": 1,
+            "projectModules": [
+                {
+                    "moduleId": 1,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 2,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 3,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "projectId": 2,
+            "projectName": "GTR",
+            "projectStatus": "New",
+            "projectDesc": "Lorem",
+            "projectLeadId": 1,
+            "projectModules": [
+                {
+                    "moduleId": 1,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 2,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 3,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "projectId": 3,
+            "projectName": "GTR",
+            "projectStatus": "New",
+            "projectDesc": "Lorem",
+            "projectLeadId": 1,
+            "projectModules": [
+                {
+                    "moduleId": 1,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 2,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 3,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "projectId": 4,
+            "projectName": "GTR",
+            "projectStatus": "New",
+            "projectDesc": "Lorem",
+            "projectLeadId": 1,
+            "projectModules": [
+                {
+                    "moduleId": 1,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 2,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 3,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        },
+        {
+            "projectId": 5,
+            "projectName": "GTR",
+            "projectStatus": "New",
+            "projectDesc": "Lorem",
+            "projectLeadId": 1,
+            "projectModules": [
+                {
+                    "moduleId": 1,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 2,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "moduleId": 3,
+                    "projectModuleName": "GTR-Product",
+                    "moduleLeadId": [
+                        1,
+                        2,
+                        3
+                    ]
+                }
+            ]
+        }
+    ],
+    "pmList": [
+        {
+            "pmId": 1,
+            "pmName": "Ankur",
+            "pmContact": "pm.lead@mail.com",
+            "staffedProjectId": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "pmId": 2,
+            "pmName": "Ankur",
+            "pmContact": "pm.lead@mail.com",
+            "staffedProjectId": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "pmId": 3,
+            "pmName": "Ankur",
+            "pmContact": "pm.lead@mail.com",
+            "staffedProjectId": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "pmId": 4,
+            "pmName": "Ankur",
+            "pmContact": "pm.lead@mail.com",
+            "staffedProjectId": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    ]
 }

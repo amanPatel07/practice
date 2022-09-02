@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router, RouteReuseStrategy, RouterLinkActive, RouterState } from '@angular/router';
 import { Observable } from 'rxjs';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { EmployeeListService } from '../employee-list.service';
@@ -17,7 +18,7 @@ export class EmployeeListComponent implements OnInit {
 
   constructor(
     private _employeeService: EmployeeService,
-    private _employeeListService: EmployeeListService
+    private _employeeListService: EmployeeListService,
   ) {
     this.deptid$ = new Observable();
     this.employeeList$ = new Observable();
