@@ -20,4 +20,10 @@
 
 .table{
     table-layout: fixed;
+    tr {
+        th,td {
+            width: 155px;
+            text-overflow: ellipsis;
+        }
+    }
 }

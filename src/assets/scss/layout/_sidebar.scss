@@ -3,6 +3,7 @@
     transition: 0.4s all ease;
 
     @include media-breakpoint-down(md) {
+        display: none;
         position: absolute;
         z-index: 10;
     }
