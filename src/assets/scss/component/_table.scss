@@ -1,29 +1,44 @@
-// .table{
-//     width: 100%;
-//     border-collapse: collapse;
-//     th{
-//         position: sticky;
-//         top: 0;
-//         font-size: $font-size-sm;
-//         background-color: $secondary;
-//     }
-//     tr{
-//         background-color: $white;
-//     }
-//     th,td{
-//         text-align: center;
-//     }
-//     td{
-//         border-bottom: 5px solid $secondary;
-//     }
-// }
-
-.table{
+.table {
     table-layout: fixed;
-    tr {
-        th,td {
-            width: 155px;
-            text-overflow: ellipsis;
+    border-collapse: collapse;
+    tr{
+        th{
+            color: $gray;
+            background-color: $white;
+            font-size: $font-size-sm;
         }
+    }
+
+    tr {
+        th,
+        td {
+            width: 100px;
+            text-overflow: ellipsis;
+            background-color: $secondary;
+        }
+        .add-icon {
+            width: 20px;
+            padding: 0.5rem 0.5rem 0 0;
+            color: $gray;
+            cursor: pointer;
+        }
+        .status-badge{
+            width: 40px;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+#thead::-webkit-scrollbar {
+    height: 0;
+}
+
+@each $key, $value in $status {
+    .status-#{$key}{
+        background-color: lighten($value, 0.5%);
+        color: $white;
+    }
+    .status-#{$key}{
+        background-color: lighten($value, 0.5%);
     }
 }

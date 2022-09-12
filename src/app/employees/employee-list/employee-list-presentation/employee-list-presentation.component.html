@@ -1,48 +1,82 @@
 <div class="d-flex flex-column h-100">
-    <div class="row m-0">
-        <h4 class="col-6 m-0 p-0 d-flex align-items-center">{{ this.departmentName }}</h4>
-        <form class="col-6 p-0 d-flex justify-content-end">
+    <div class="row m-0 align-items-center">
+        <div class="col-8 d-flex flex-row align-items-end">
+            <div class="pe-4">
+                <h4 class="mb-1 p-0 text-muted">{{ this.departmentName }}</h4>
+                <p class="p-0 m-0">Lead By:
+                    <span class="ps-1 fw-bold">{{ this.leadName }}</span>
+                </p>
+            </div>
+            <form>
+                <!-- <select class="form-select rounded-pill">
+                    <option selected disabled>Sort By</option>
+                    <option value="1">Available</option>
+                    <option value="2">Staffed</option>
+                </select> -->
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-info text-white fs-6 me-3">All</button>
+                    <button type="button" class="btn me-3">Available</button>
+                    <button type="button" class="btn me-3">Staffed</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4 p-0 d-flex justify-content-end align-items-end">
             <div class="input-group">
                 <span class="input-group-text icon-search" id="basic-addon1"></span>
                 <input type="text" class="form-control" placeholder="Search Employee">
             </div>
-        </form>
+        </div>
     </div>
+    <!-- Start: Table -->
     <div class="d-flex flex-column flex-grow-1 overflow-hidden mt-3">
-
-        <div id="thead" class="overflow-horizontal" (scroll)="getTheadScroll($event)" #getThead>
+        <!-- Start: Table Head -->
+        <div id="thead" class="flex-shrink-0 overflow-horizontal" (scroll)="getTheadScroll($event)" #getThead>
             <table class="table mb-0">
                 <thead class="border-muted border-bottom text-lightgray fw-lighter overflow-hidden text-truncate">
-                    <tr>
-                        <th></th>
-                        <th class="text-center">Employee Name</th>
-                        <th class="text-center">ID</th>
-                        <th class="text-center">Designation</th>
-                        <th class="text-center">Role</th>
-                        <th class="text-center">Manager/Team Lead</th>
-                        <th class="text-center">Email</th>
-                        <th class="text-center">Contact Number</th>
+                    <tr class="overflow-hidden">
+                        <th class="add-icon"></th>
+                        <th class="status-badge"></th>
+                        <th class="p-2 text-truncate">Employee Name</th>
+                        <th class="p-2 text-truncate">ID</th>
+                        <th class="p-2 text-truncate">Designation</th>
+                        <th class="p-2 text-truncate">Role</th>
+                        <th class="p-2 text-truncate">Email</th>
+                        <th class="p-2 text-truncate">Contact Number</th>
                     </tr>
                 </thead>
             </table>
         </div>
+        <!-- End: Table Head -->
+        <!-- Start: Table Body -->
         <div id="tbody" class="d-flex flex-grow-1 overflow-auto" (scroll)="getTbodyScroll($event)" #getTbody>
             <div>
                 <table class="table mb-0">
-                    <tbody class="p-3 overflow-hidden text-truncate">
-                        <tr *ngFor="let employee of employeeList">
-                            <td>Add</td>
-                            <td>{{ employee.employeeName }}</td>
-                            <td class="text-center">GT-123</td>
-                            <td>Associate Trannie</td>
-                            <td>Frontend Dev</td>
-                            <td>Aayush</td>
-                            <td>employee.gtr@mail.com</td>
-                            <td class="text-center">9087654321</td>
+                    <tbody class="p-3">
+                        <tr *ngFor="let employee of employeeList"
+                            class="overflow-hidden text-truncate border-bottom border-white">
+                            <td class="add-icon" (click)="addTo()">
+                                <span class="add-icon icon-plus rounded"></span>
+                            </td>
+                            <td class="status-badge text-center text-truncate">
+                                <span class="status-available badge rounded-pill py-1 px-2 me-2"
+                                    *ngIf="!checkAvailability(employee.staffProjectId)">Available</span>
+                                <span class="status-not-available badge rounded-pill py-1 px-2 me-2"
+                                    *ngIf="checkAvailability(employee.staffProjectId)">Staffed</span>
+                            </td>
+                            <td class="p-2 text-truncate">
+                                <span class="fw-bold">{{ employee.employeeName }}</span>
+                            </td>
+                            <td class="p-2 text-truncate">GT-123</td>
+                            <td class="p-2 text-truncate">{{ employee.designation }}</td>
+                            <td class="p-2 text-truncate">{{ employee.role }}</td>
+                            <td class="p-2 text-truncate">{{ employee.email }}</td>
+                            <td class="p-2 text-truncate">{{ employee.contact }}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+        <!-- End: Table Body -->
     </div>
+    <!-- End: Table -->
 </div>

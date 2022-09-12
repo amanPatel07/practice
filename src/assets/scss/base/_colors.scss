@@ -1,8 +1,18 @@
 $primary: #2C3FDE;
 $secondary: #f3f3f3;
 $accent: #858291;
+$success: #28a745;
+$danger: #dc3545;
 $info: #9E9EA2;
 $gray: #67666B;
 $white: #F9F9FC;
 $light: #dfdfdf;
 $dark: #393737;
+
+
+
+// Map
+$status: (
+    "available": $success,
+    "not-available": $danger 
+)

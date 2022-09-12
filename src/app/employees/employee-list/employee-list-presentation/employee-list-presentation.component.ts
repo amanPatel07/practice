@@ -2,6 +2,7 @@ import { ScrollDispatcher } from '@angular/cdk/scrolling';
 import { Target } from '@angular/compiler';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Scroll } from '@angular/router';
+import { Department, EmployeeDetails, StaffedProject } from '../../model';
 import { EmployeeListPresenterService } from '../employee-list-presenter/employee-list-presenter.service';
 
 @Component({
@@ -17,11 +18,7 @@ export class EmployeeListPresentationComponent implements OnInit {
   * @return The Department ID
   */
   @Input() public set departmentId(value: any) {
-    // if (value) {
-    //   this._departmentId = value;
-    //   this.getEmployeeListById();
-    // }
-    value ?  this._departmentId = value : '';
+    value ? this._departmentId = value : '';
     this.getEmployeeListById();
   }
   public get departmentId(): any {
@@ -33,10 +30,11 @@ export class EmployeeListPresentationComponent implements OnInit {
    * @description Get the employee list by the department ID
    * @return The Employee List
    */
-  @Input() public set employeeList(value: any | null) {
+  @Input() public set employeeList(value: Department | null) {
     if (value) {
       this._employeeList = value['employee'];
       this.departmentName = value['departmentName'];
+      this.leadName = value['leadName'];
     }
     return;
   }
@@ -45,6 +43,7 @@ export class EmployeeListPresentationComponent implements OnInit {
   }
   private _employeeList!: any;
   public departmentName: any;
+  public leadName!: string;
 
   /**
    * @name getThead 
@@ -96,5 +95,26 @@ export class EmployeeListPresentationComponent implements OnInit {
   public getTbodyScroll(event: any) {
     const getHead: any = this.getThead.nativeElement;
     getHead.scrollLeft = event.target.scrollLeft;
+  }
+
+  public addTo() {
+    console.log('Add to')
+  }
+
+  /**
+   * @name checkAvailability
+   * @description Check the status if the employee has the free hours from official hours
+   * @param employeeList List of the employee staffed in project 
+   * @returns Boolean
+   */
+  public checkAvailability(stafedDetails: StaffedProject[]) {
+    let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
+    let totalHours = list.reduce((perviousValue:number, currentValue: number) => perviousValue + currentValue);
+    if(totalHours >= 40 ){
+      return true;
+    }
+    else{
+      return false
+    }
   }
 }
