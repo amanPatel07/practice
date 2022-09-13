@@ -1,30 +1,41 @@
 <div class="d-flex flex-column h-100">
     <div class="row m-0 align-items-center">
         <div class="col-8 d-flex flex-row align-items-end">
+            <!-- Start: Heading -->
             <div class="pe-4">
                 <h4 class="mb-1 p-0 text-muted">{{ this.departmentName }}</h4>
                 <p class="p-0 m-0">Lead By:
                     <span class="ps-1 fw-bold">{{ this.leadName }}</span>
                 </p>
             </div>
-            <form>
-                <!-- <select class="form-select rounded-pill">
-                    <option selected disabled>Sort By</option>
-                    <option value="1">Available</option>
-                    <option value="2">Staffed</option>
-                </select> -->
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-info text-white fs-6 me-3">All</button>
-                    <button type="button" class="btn me-3">Available</button>
-                    <button type="button" class="btn me-3">Staffed</button>
+            <!-- End: Heading -->
+            <!-- Start: Sort by form -->
+            <form [formGroup]="sortForm" class="sort-form d-flex flex-row bg-light rounded-pill" (change)="sort()">
+                <div>
+                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="all"
+                        value="all" [checked]="true">
+                    <label class="sortby-form-label text-center px-2 py-1 rounded-pill" for="all">All</label>
+                </div>
+                <div class="px-2">
+                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="available"
+                        value="available">
+                    <label class="sortby-form-label text-center p-1 rounded-pill" for="available">Available</label>
+                </div>
+                <div>
+                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="staffed"
+                        value="staffed">
+                    <label class="sortby-form-label text-center p-1 rounded-pill" for="staffed">Staffed</label>
                 </div>
             </form>
+            <!-- End: Sort by form -->
         </div>
         <div class="col-4 p-0 d-flex justify-content-end align-items-end">
+            <!-- Start: Search form -->
             <div class="input-group">
                 <span class="input-group-text icon-search" id="basic-addon1"></span>
                 <input type="text" class="form-control" placeholder="Search Employee">
             </div>
+            <!-- End: Search form -->
         </div>
     </div>
     <!-- Start: Table -->
@@ -48,7 +59,7 @@
         </div>
         <!-- End: Table Head -->
         <!-- Start: Table Body -->
-        <div id="tbody" class="d-flex flex-grow-1 overflow-auto" (scroll)="getTbodyScroll($event)" #getTbody>
+        <div id="tbody" class="d-flex flex-column flex-grow-1 overflow-auto" (scroll)="getTbodyScroll($event)" #getTbody>
             <div>
                 <table class="table mb-0">
                     <tbody class="p-3">
@@ -59,9 +70,13 @@
                             </td>
                             <td class="status-badge text-center text-truncate">
                                 <span class="status-available badge rounded-pill py-1 px-2 me-2"
-                                    *ngIf="!checkAvailability(employee.staffProjectId)">Available</span>
+                                    *ngIf="!checkAvailability(employee.staffProjectId)">
+                                    Available
+                                </span>
                                 <span class="status-not-available badge rounded-pill py-1 px-2 me-2"
-                                    *ngIf="checkAvailability(employee.staffProjectId)">Staffed</span>
+                                    *ngIf="checkAvailability(employee.staffProjectId)">
+                                    Staffed
+                                </span>
                             </td>
                             <td class="p-2 text-truncate">
                                 <span class="fw-bold">{{ employee.employeeName }}</span>
@@ -75,6 +90,9 @@
                     </tbody>
                 </table>
             </div>
+            <!-- <div *ngIf="employeeList">
+                <p>No Record Found</p>
+            </div> -->
         </div>
         <!-- End: Table Body -->
     </div>

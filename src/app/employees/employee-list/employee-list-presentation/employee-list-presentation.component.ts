@@ -1,7 +1,6 @@
-import { ScrollDispatcher } from '@angular/cdk/scrolling';
-import { Target } from '@angular/compiler';
+
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { Scroll } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 import { Department, EmployeeDetails, StaffedProject } from '../../model';
 import { EmployeeListPresenterService } from '../employee-list-presenter/employee-list-presenter.service';
 
@@ -12,6 +11,7 @@ import { EmployeeListPresenterService } from '../employee-list-presenter/employe
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeListPresentationComponent implements OnInit {
+
   /**
   * @name departmenrId Setter Getter for the departmentID
   * @description Get the departmenrID
@@ -25,6 +25,7 @@ export class EmployeeListPresentationComponent implements OnInit {
     return this._departmentId;
   }
   private _departmentId!: any;
+
   /**
    * @name EmployeeList Settter Getter for the Employeel List
    * @description Get the employee list by the department ID
@@ -32,7 +33,10 @@ export class EmployeeListPresentationComponent implements OnInit {
    */
   @Input() public set employeeList(value: Department | null) {
     if (value) {
+      this._employeeListOriginal = value['employee'];
       this._employeeList = value['employee'];
+      console.log(this._employeeList);
+      
       this.departmentName = value['departmentName'];
       this.leadName = value['leadName'];
     }
@@ -41,7 +45,8 @@ export class EmployeeListPresentationComponent implements OnInit {
   public get employeeList(): any {
     return this._employeeList;
   }
-  private _employeeList!: any;
+  private _employeeList!: EmployeeDetails[];
+  private _employeeListOriginal!: EmployeeDetails[];
   public departmentName: any;
   public leadName!: string;
 
@@ -62,12 +67,16 @@ export class EmployeeListPresentationComponent implements OnInit {
    */
   @Output() getEmployeeById: EventEmitter<any>;
 
-  constructor(private cdr: ChangeDetectorRef) {
+  public sortForm!: FormGroup
+
+  constructor(private cdr: ChangeDetectorRef, private _employeePresenter: EmployeeListPresenterService) {
     this.getEmployeeById = new EventEmitter();
   }
 
   ngOnInit(): void {
+    this.sortForm = this._employeePresenter.buildForm();
     this.getEmployeeListById();
+    this.getSortedList();
   }
 
   /**
@@ -87,6 +96,7 @@ export class EmployeeListPresentationComponent implements OnInit {
     const getBody: any = this.getTbody.nativeElement;
     getBody.scrollLeft = event.target.scrollLeft;
   }
+
   /**
    * @name getTbodyScroll
    * @param event Get the Event of the element
@@ -97,24 +107,34 @@ export class EmployeeListPresentationComponent implements OnInit {
     getHead.scrollLeft = event.target.scrollLeft;
   }
 
-  public addTo() {
-    console.log('Add to')
-  }
-
   /**
-   * @name checkAvailability
-   * @description Check the status if the employee has the free hours from official hours
-   * @param employeeList List of the employee staffed in project 
-   * @returns Boolean
-   */
+  * @name checkAvailability
+  * @description Check the status if the employee has the free hours from official hours
+  * @param employeeList List of the employee staffed in project 
+  * @returns Boolean
+  */
   public checkAvailability(stafedDetails: StaffedProject[]) {
     let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
-    let totalHours = list.reduce((perviousValue:number, currentValue: number) => perviousValue + currentValue);
-    if(totalHours >= 40 ){
+    let totalHours = list.reduce((perviousValue: number, currentValue: number) => perviousValue + currentValue);
+    if (totalHours >= 40) {
       return true;
     }
-    else{
+    else {
       return false
     }
+  }
+
+  public sort() {
+    this._employeePresenter.sort(this.sortForm.value, this._employeeListOriginal);
+  }
+
+  public getSortedList() {
+    this._employeePresenter.sortedList$.subscribe((res: any) => {
+      this._employeeList = res
+    })
+  }
+
+  public addTo() {
+    console.log('Add to')
   }
 }

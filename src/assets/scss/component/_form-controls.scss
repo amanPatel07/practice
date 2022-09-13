@@ -1,23 +1,44 @@
-.input-group{
+.input-group {
     width: 50%;
 }
 
 
-.form-floating{
-    .validation{
+.form-floating {
+    .validation {
         display: none;
     }
 
-    .form-control{
-        &:focus{
+    .form-control {
+        &:focus {
             background: $white;
         }
     }
-    
-    &.invalid{
-        .validation{
+
+    &.invalid {
+        .validation {
             display: block;
             font-size: $font-size-sm;
         }
+    }
+}
+
+// Sort by form
+.sort-form {
+    
+    .sortby-form-item {
+        display: none;
+        appearance: none;
+    }
+
+    .sortby-form-label{
+        width: 100px;
+        font-size: 0.875rem;
+        font-weight: $font-weight-bold;
+    }
+
+    .sortby-form-item:checked+.sortby-form-label {
+        background-color: $primary;
+        color: $white;
+        transition: 0.4s all;
     }
 }

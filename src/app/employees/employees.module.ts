@@ -18,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   providers: [
+    EmployeeListService,
     EmployeeListService
   ]
 })
