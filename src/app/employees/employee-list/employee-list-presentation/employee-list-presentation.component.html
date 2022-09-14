@@ -10,7 +10,7 @@
             </div>
             <!-- End: Heading -->
             <!-- Start: Sort by form -->
-            <form [formGroup]="sortForm" class="sort-form d-flex flex-row bg-light rounded-pill" (change)="sort()">
+            <form [formGroup]="filterForm" class="sort-form d-flex flex-row bg-light rounded-pill" (change)="filter()">
                 <div>
                     <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="all"
                         value="all" [checked]="true">
@@ -65,7 +65,7 @@
                     <tbody class="p-3">
                         <tr *ngFor="let employee of employeeList"
                             class="overflow-hidden text-truncate border-bottom border-white">
-                            <td class="add-icon" (click)="addTo()">
+                            <td class="add-icon" (click)="addTo(employee.employeeId)">
                                 <span class="add-icon icon-plus rounded"></span>
                             </td>
                             <td class="status-badge text-center text-truncate">

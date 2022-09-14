@@ -36,7 +36,7 @@ export class EmployeeListPresentationComponent implements OnInit {
       this._employeeListOriginal = value['employee'];
       this._employeeList = value['employee'];
       console.log(this._employeeList);
-      
+
       this.departmentName = value['departmentName'];
       this.leadName = value['leadName'];
     }
@@ -67,16 +67,19 @@ export class EmployeeListPresentationComponent implements OnInit {
    */
   @Output() getEmployeeById: EventEmitter<any>;
 
-  public sortForm!: FormGroup
+  @Output() openOverlay: EventEmitter<any>;
+
+  public filterForm!: FormGroup
 
   constructor(private cdr: ChangeDetectorRef, private _employeePresenter: EmployeeListPresenterService) {
     this.getEmployeeById = new EventEmitter();
+    this.openOverlay = new EventEmitter();
   }
 
   ngOnInit(): void {
-    this.sortForm = this._employeePresenter.buildForm();
+    this.filterForm = this._employeePresenter.buildForm();
     this.getEmployeeListById();
-    this.getSortedList();
+    this.getfilteredList();
   }
 
   /**
@@ -124,17 +127,30 @@ export class EmployeeListPresentationComponent implements OnInit {
     }
   }
 
-  public sort() {
-    this._employeePresenter.sort(this.sortForm.value, this._employeeListOriginal);
+  /**
+   * @name sort
+   * @parameters The filterby value and the employee list.
+   */
+  public filter() {
+    this._employeePresenter.filter(this.filterForm.value, this._employeeListOriginal);
   }
 
-  public getSortedList() {
+  /**
+   * @name getSortedList
+   * @description To get the filtered employee list
+   */
+  public getfilteredList() {
     this._employeePresenter.sortedList$.subscribe((res: any) => {
       this._employeeList = res
     })
   }
 
-  public addTo() {
-    console.log('Add to')
+  public addTo(employeeId: any) {
+    let departmenrId = this.departmentId;
+    let id = {
+      employeeId,
+      departmenrId
+    };
+    this.openOverlay.emit(id);
   }
 }

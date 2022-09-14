@@ -22,7 +22,7 @@ export class EmployeeListPresenterService {
     })
   }
 
-  public sort(form: any, employeeList: EmployeeDetails[]) {
+  public filter(form: any, employeeList: EmployeeDetails[]) {
     let sortorder = form
     let list = employeeList.map((item: any) => item)
     let sorted: EmployeeDetails[] = [];

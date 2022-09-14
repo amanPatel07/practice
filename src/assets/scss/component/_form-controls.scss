@@ -24,16 +24,16 @@
 
 // Sort by form
 .sort-form {
-    
     .sortby-form-item {
         display: none;
         appearance: none;
     }
-
+    
     .sortby-form-label{
         width: 100px;
         font-size: 0.875rem;
         font-weight: $font-weight-bold;
+        cursor: pointer;
     }
 
     .sortby-form-item:checked+.sortby-form-label {
