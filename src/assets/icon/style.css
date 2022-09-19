@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?tdxule');
-  src:  url('fonts/icomoon.eot?tdxule#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?tdxule') format('truetype'),
-    url('fonts/icomoon.woff?tdxule') format('woff'),
-    url('fonts/icomoon.svg?tdxule#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?bc5ru8');
+  src:  url('fonts/icomoon.eot?bc5ru8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bc5ru8') format('truetype'),
+    url('fonts/icomoon.woff?bc5ru8') format('woff'),
+    url('fonts/icomoon.svg?bc5ru8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -63,6 +63,9 @@
 }
 .icon-flickr:before {
   content: "\eaa3";
+}
+.icon-folders:before {
+  content: "\e900";
 }
 .icon-checkmark:before {
   content: "\ea10";

@@ -1,8 +1,48 @@
-<div class="staff-form d-flex bg-info h-100">
-    <form class="row m-0 p-0 g-2">
-        <div class="col-12 d-flex flex-column">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
-        </div>
-    </form>
+<div class="staff-form d-flex bg-white overflow-hidden">
+    <aside class="h-100 p-5 d-flex flex-column justify-content-end bg-secondary flex-shrink-0">
+        <span class="form-aside-icon icon-folders"></span>
+    </aside>
+    <div class="d-flex flex-column flex-grow-1 p-4">
+        <p class="d-flex justify-content-end m-0 py-3">
+            Having Trouble?
+            <a class="text-primary ps-2 fw-bold"> Get Help</a>
+        </p>
+        <h5 class="fw-bolder mb-3">Add Employee to Project</h5>
+        <form class="row overflow-auto">
+            <div class="col-9 mb-3">
+                <label class="form-label m-0" for="name">Employee Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="col-6 mb-3">
+                <label class="form-label m-0" for="email">Email:</label>
+                <input type="text" class="form-control" name="email" id="email">
+            </div>
+            <div class="col-6 mb-3">
+                <label class="form-label m-0" for="contactNumber">Contact Number:</label>
+                <input type="text" class="form-control" name="contactNumber" id="contactNumber">
+            </div>
+            <div class="col-6 mb-3">
+                <label class="form=label m-0" for="designation">Designation:</label>
+                <input type="text" class="form-control" name="designation" id="designation">
+            </div>
+            <div class="col-6 mb-3">
+                <label class="form=label m-0" for="role">Role</label>
+                <input type="text" class="form-control" name="role" id="role">
+            </div>
+            <div class="col-9 mb-3">
+                <label for="project">Select Project:</label>
+                <select class="form-select" name="project" id="project">
+                    <option value="">MT-v</option>
+                    <option value="">MT-v</option>
+                    <option value="">MT-v</option>
+                    <option value="">MT-v</option>
+                    <option value="">MT-v</option>
+                </select>
+            </div>
+            <div class="col-3 mb-3">
+                <label for="joinDate">Joining Date:</label>
+                <input type="text" class="form-control">
+            </div>
+        </form>
+    </div>
 </div>

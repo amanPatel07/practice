@@ -26,7 +26,7 @@ export class FormOverlayComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('jashgag',this.details);
-    
+
   }
 
 }

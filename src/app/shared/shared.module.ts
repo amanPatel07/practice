@@ -10,12 +10,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
-  
     FormOverlayComponent
   ],
   imports: [
     CommonModule,
-    OverlayModule
+    OverlayModule,
+    
   ],
   exports: [
     HttpClientModule,

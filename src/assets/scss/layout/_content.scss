@@ -30,5 +30,11 @@
     transform: rotate(-90deg);
 }
 
-// .staff-form{
-// }
+.staff-form{
+    height: 800px;
+    width: 1200px;
+    .form-aside-icon{
+        font-size: $font-size-xxl * 4;
+        color: $primary;
+    }
+}

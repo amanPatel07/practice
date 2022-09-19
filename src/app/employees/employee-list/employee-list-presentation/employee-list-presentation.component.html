@@ -59,7 +59,8 @@
         </div>
         <!-- End: Table Head -->
         <!-- Start: Table Body -->
-        <div id="tbody" class="d-flex flex-column flex-grow-1 overflow-auto" (scroll)="getTbodyScroll($event)" #getTbody>
+        <div id="tbody" class="d-flex flex-column flex-grow-1 overflow-auto" (scroll)="getTbodyScroll($event)"
+            #getTbody>
             <div>
                 <table class="table mb-0">
                     <tbody class="p-3">
@@ -87,6 +88,7 @@
                             <td class="p-2 text-truncate">{{ employee.email }}</td>
                             <td class="p-2 text-truncate">{{ employee.contact }}</td>
                         </tr>
+                        <tr>
                     </tbody>
                 </table>
             </div>
