@@ -1,5 +1,6 @@
 <div class="staff-form d-flex bg-white overflow-hidden">
-    <aside class="h-100 p-5 d-flex flex-column justify-content-end bg-secondary flex-shrink-0">
+    <aside class="h-100 p-5 d-flex flex-column justify-content-end bg-secondary flex-shrink-0 position-relative">
+        <button class="close-icon btn-close position-absolute" (click)="close()"></button>
         <span class="form-aside-icon icon-folders"></span>
     </aside>
     <div class="d-flex flex-column flex-grow-1 p-4">
@@ -7,41 +8,59 @@
             Having Trouble?
             <a class="text-primary ps-2 fw-bold"> Get Help</a>
         </p>
-        <h5 class="fw-bolder mb-3">Add Employee to Project</h5>
-        <form class="row overflow-auto">
-            <div class="col-9 mb-3">
-                <label class="form-label m-0" for="name">Employee Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+        <h6 class="mb-3 text-info">Staff <strong class="text-dark"> {{this.employeeName}} </strong>in Project</h6>
+        <form class="d-flex flex-column flex-grow-1 justify-content-between overflow-hidden" [formGroup]="staffForm">
+            <div class="row mb-3 overflow-auto">
+                <div class="col-9 mb-3">
+                    <label class="form-label m-0" for="name">Employee Name</label>
+                    <input formControlName="employeeName" type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="col-6 mb-3">
+                    <label class="form-label m-0" for="email">Email</label>
+                    <input formControlName="email" type="text" class="form-control" name="email" id="email">
+                </div>
+                <div class="col-6 mb-3">
+                    <label class="form-label m-0" for="contactNumber">Contact Number</label>
+                    <input formControlName="contactNumber" type="text" class="form-control" name="contactNumber" id="contactNumber">
+                </div>
+                <div class="col-6 mb-3">
+                    <label class="form-label m-0" for="designation">Designation</label>
+                    <input formControlName="designation" type="text" class="form-control" name="designation" id="designation">
+                </div>
+                <div class="col-6 mb-3">
+                    <label class="form-label m-0" for="role">Role</label>
+                    <input formControlName="role" type="text" class="form-control" name="role" id="role">
+                </div>
+                <div class="col-9 mb-3">
+                    <label class="form-label m-0" for="project">Select Project</label>
+                    <select class="form-select" name="project" id="project">
+                        <option selected></option>
+                        <option *ngFor="let project of projectList">{{ project.projectName }}</option>
+                    </select>
+                </div>
+                <div class="col-3 mb-3">
+                    <label class="form-label m-0" for="joinDate">Joining Date</label>
+                    <input formControlName="joinDate" type="date" class="form-control" name="joinDate">
+                </div>
+                <div class="col-6 mb-3">
+                    <label class="form-label m-0" for="projectStatus">Project Status</label>
+                    <select class="form-select" name="projectStatus" id="projectStatus">
+                        <option value="" selected></option>
+                        <option value="">New</option>
+                        <option value="">In Progress</option>
+                    </select>
+                </div>
+                <div class="col-7">
+                    <label class="form-label m-0" for="projectDesc">Project Description</label>
+                    <textarea formControlName="projectDesc" class="form-control" name="projectDesc" id="projectDesc" cols="20" rows="5"></textarea>
+                </div>
             </div>
-            <div class="col-6 mb-3">
-                <label class="form-label m-0" for="email">Email:</label>
-                <input type="text" class="form-control" name="email" id="email">
-            </div>
-            <div class="col-6 mb-3">
-                <label class="form-label m-0" for="contactNumber">Contact Number:</label>
-                <input type="text" class="form-control" name="contactNumber" id="contactNumber">
-            </div>
-            <div class="col-6 mb-3">
-                <label class="form=label m-0" for="designation">Designation:</label>
-                <input type="text" class="form-control" name="designation" id="designation">
-            </div>
-            <div class="col-6 mb-3">
-                <label class="form=label m-0" for="role">Role</label>
-                <input type="text" class="form-control" name="role" id="role">
-            </div>
-            <div class="col-9 mb-3">
-                <label for="project">Select Project:</label>
-                <select class="form-select" name="project" id="project">
-                    <option value="">MT-v</option>
-                    <option value="">MT-v</option>
-                    <option value="">MT-v</option>
-                    <option value="">MT-v</option>
-                    <option value="">MT-v</option>
-                </select>
-            </div>
-            <div class="col-3 mb-3">
-                <label for="joinDate">Joining Date:</label>
-                <input type="text" class="form-control">
+            <div class="d-flex justify-content-between">                    
+                <button type="button" class="btn btn-secondary text-danger px-4" (click)="reset()">Reset</button>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-info text-white px-4 ms-3" (click)="close()">Cancel</button>
+                    <button type="button" class="btn btn-primary px-4 ms-3" (click)="submit()">Submit</button>
+                </div>
             </div>
         </form>
     </div>

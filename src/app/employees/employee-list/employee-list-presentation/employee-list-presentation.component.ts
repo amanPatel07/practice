@@ -35,8 +35,6 @@ export class EmployeeListPresentationComponent implements OnInit {
     if (value) {
       this._employeeListOriginal = value['employee'];
       this._employeeList = value['employee'];
-      console.log(this._employeeList);
-
       this.departmentName = value['departmentName'];
       this.leadName = value['leadName'];
     }
@@ -145,12 +143,20 @@ export class EmployeeListPresentationComponent implements OnInit {
     })
   }
 
-  public addTo(employeeId: any) {
-    let departmenrId = this.departmentId;
-    let id = {
-      employeeId,
-      departmenrId
-    };
-    this.openOverlay.emit(id);
+  public addTo(employeeId: any, isStaffed: boolean) {
+    if (!isStaffed) {
+      console.log(isStaffed)
+      let departmenrId = this.departmentId;
+      let id = {
+        employeeId,
+        departmenrId
+      };
+      this.openOverlay.emit(id);
+    }
+    else {
+      console.log('value')
+    }
   }
+
+  
 }

@@ -13,6 +13,7 @@ export class Department {
         this.departmentName = departmentName;
         this.employee = employee;
         this.leadName = leadName;
+        this.employee = employee;
     }
 }
 export class EmployeeDetails {

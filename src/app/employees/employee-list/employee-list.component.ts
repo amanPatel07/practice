@@ -28,7 +28,6 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.deptid$ = this._employeeService.departmentId$;
-    this.openOverlay(0)
   }
   
   public getEmployeeById(id: any) {
