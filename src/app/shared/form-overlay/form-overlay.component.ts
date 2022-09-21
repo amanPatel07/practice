@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Input, OnInit, Output, ViewContainerRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CommonService } from '../common-services/common.service';
 import { UtilityService } from '../common-services/utility.service';
@@ -17,6 +17,7 @@ export class FormOverlayComponent implements OnInit {
   public currentEmployee!: Employee;
   public employeeName!: string;
   public projectList: any;
+  public hasAvailableTime!: number;
 
   /**
    * @name currentDetails
@@ -40,17 +41,26 @@ export class FormOverlayComponent implements OnInit {
   constructor(
     public fb: FormBuilder,
     public utilityService: UtilityService,
-    private _commonService: CommonService
+    private _commonService: CommonService,
   ) {
     this.staffForm = this.formBuild();
     this.closeOverlay = new EventEmitter();
   }
 
   ngOnInit(): void {
+    this.props();
     this.getEmployeeById();
     this.getProject();
   }
-
+  
+  public props(){
+    this.hasAvailableTime = parseFloat((40 - this.details.currentEmpHour).toFixed(2));
+    this.getControls['employeeName'].disable();
+    this.getControls['email'].disable();
+    this.getControls['contactNumber'].disable();
+    this.getControls['designation'].disable();
+  }
+  
   /**
    * @name formBuild
    * @description Create the form group
@@ -67,7 +77,12 @@ export class FormOverlayComponent implements OnInit {
       joinDate: [],
       projectStatus: [],
       projectDesc: [],
+      minHour: []
     })
+  }
+
+  public get getControls(){
+    return this.staffForm.controls;
   }
 
   /**
@@ -101,14 +116,20 @@ export class FormOverlayComponent implements OnInit {
   }
 
   public submit() {
-    console.log(this.staffForm.value)
+    let projectId = parseInt(this.staffForm.controls['project'].value);
+    let hourSpend = this.getControls['minHour'].value;
+    let joinDate = this.getControls['joinDate'].value;
+    this.currentEmployee.staffProjectId.push({projectId, hourSpend, joinDate});
+    this.getControls['project'].setValue(parseInt(this.staffForm.controls['project'].value))
+    console.log(this.currentEmployee);
+    console.log(this.staffForm.value);
   }
-
-  public reset(): void{
+  
+  public reset(){
     this.staffForm.reset();
     this.staffForm.patchValue(this.currentEmployee);
   }
 
   
-
+  
 }

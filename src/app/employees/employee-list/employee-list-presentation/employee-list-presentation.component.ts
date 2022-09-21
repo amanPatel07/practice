@@ -47,6 +47,7 @@ export class EmployeeListPresentationComponent implements OnInit {
   private _employeeListOriginal!: EmployeeDetails[];
   public departmentName: any;
   public leadName!: string;
+  public currentEmpHour!: number;
 
   /**
    * @name getThead 
@@ -58,6 +59,7 @@ export class EmployeeListPresentationComponent implements OnInit {
    * @description Element Reference
    */
   @ViewChild('getTbody') getTbody!: ElementRef<HTMLElement>;
+  @ViewChild('cursorPosition') getcursorPosition!: ElementRef<any>
 
   /**
    * @name getEmployeeListById An event emitter
@@ -67,11 +69,14 @@ export class EmployeeListPresentationComponent implements OnInit {
 
   @Output() openOverlay: EventEmitter<any>;
 
+  @Output() openPopup: EventEmitter<any>
+
   public filterForm!: FormGroup
 
   constructor(private cdr: ChangeDetectorRef, private _employeePresenter: EmployeeListPresenterService) {
     this.getEmployeeById = new EventEmitter();
     this.openOverlay = new EventEmitter();
+    this.openPopup = new EventEmitter();
   }
 
   ngOnInit(): void {
@@ -117,6 +122,7 @@ export class EmployeeListPresentationComponent implements OnInit {
   public checkAvailability(stafedDetails: StaffedProject[]) {
     let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
     let totalHours = list.reduce((perviousValue: number, currentValue: number) => perviousValue + currentValue);
+    this.currentEmpHour = totalHours;
     if (totalHours >= 40) {
       return true;
     }
@@ -143,20 +149,21 @@ export class EmployeeListPresentationComponent implements OnInit {
     })
   }
 
-  public addTo(employeeId: any, isStaffed: boolean) {
-    if (!isStaffed) {
-      console.log(isStaffed)
-      let departmenrId = this.departmentId;
-      let id = {
-        employeeId,
-        departmenrId
-      };
-      this.openOverlay.emit(id);
-    }
-    else {
-      console.log('value')
-    }
+  public addTo(employeeId: any, isStaffed: boolean, currentEmpName: string) {
+    let currentEmpHour = this.currentEmpHour;
+    let departmenrId = this.departmentId;
+    let currentEmp = {
+      employeeId,
+      departmenrId,
+      currentEmpHour,
+      currentEmpName
+    };
+    (!isStaffed) ? this.openOverlay.emit(currentEmp) : this.openPopup.emit(currentEmp.currentEmpName)
   }
 
-  
+  public openAction(event:any){
+    console.log(event)
+  }
+
+
 }

@@ -6,11 +6,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormOverlayComponent } from './form-overlay/form-overlay.component';
 import { UtilityService } from './common-services/utility.service';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { PopupComponent } from './popup/popup.component';
+import { GetcursorDirective } from './directives/getcursor.directive';
 
 
 @NgModule({
   declarations: [
-    FormOverlayComponent
+    FormOverlayComponent,
+    PopupComponent,
+    GetcursorDirective
   ],
   imports: [
     CommonModule,
@@ -20,6 +24,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
   exports: [
     HttpClientModule,
     ReactiveFormsModule,
+    GetcursorDirective
   ],
   providers: [
     CommonService,

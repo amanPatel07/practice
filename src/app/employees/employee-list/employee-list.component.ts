@@ -3,6 +3,7 @@ import { ActivatedRoute, Route, Router, RouteReuseStrategy, RouterLinkActive, Ro
 import { Observable } from 'rxjs';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { UtilityService } from 'src/app/shared/common-services/utility.service';
+import { Popup_Type } from 'src/app/shared/constants';
 import { EmployeeListService } from '../employee-list.service';
 
 @Component({
@@ -35,7 +36,11 @@ export class EmployeeListComponent implements OnInit {
   }
 
   public openOverlay(details:any){
-    this._utilityService.openOverlayForm(details)
+    this._utilityService.openOverlayForm(details, Popup_Type.FORM_OVERLAY)
+  }
+
+  public openPopup(event: any){
+    this._utilityService.openPopup(event, Popup_Type.INFO_POPUP);
   }
 
   

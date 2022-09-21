@@ -67,7 +67,8 @@
                     <tbody class="p-3">
                         <tr *ngFor="let employee of employeeList"
                             class="overflow-hidden text-truncate border-bottom border-white">
-                            <td class="add-icon" (click)="addTo(employee.employeeId, checkAvailability(employee.staffProjectId))">
+                            <td class="add-icon"
+                                (click)="addTo(employee.employeeId, checkAvailability(employee.staffProjectId), employee.employeeName)">
                                 <span class="add-icon icon-plus rounded"></span>
                             </td>
                             <td class="status-badge text-center text-truncate">
@@ -88,7 +89,11 @@
                             <td class="p-2 text-truncate">{{ employee.role }}</td>
                             <td class="p-2 text-truncate">{{ employee.email }}</td>
                             <td class="p-2 text-truncate">{{ employee.contactNumber }}</td>
-                            <td class="p-2"></td>
+                            <td class="p-2">
+                                <span class="ps-4" (click)="openAction($event)" #cursorPosition appGetcursor>
+                                    ...
+                                </span>
+                            </td>
                         </tr>
                         <tr>
                     </tbody>
