@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Popup_Type } from '../constants';
 
 @Component({
   selector: 'app-popup',
@@ -8,15 +9,27 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class PopupComponent implements OnInit {
 
-  
-  @Input() public set empName(v : string) {
-    this._empName = v;
+  @Input() public set event(value : string) {
+    this._event = value;
   }
-  public get empName() : string {
-    return this._empName;
+  public get event() : string {
+    return this._event;
   }
-  private _empName! : string;
+  private _event! : string;
+
   
+  @Input() public set popupType(value : any) {
+    this._popupType = value;
+    if(this._popupType === Popup_Type.ACTION_POPUP){
+      this.isAction = true
+    }
+  }
+  public get popupType() : any {
+    return this._popupType;
+  }
+  private _popupType! : any;
+  
+  public isAction!: boolean;
 
 /**
  * @name closeOverlay

@@ -96,14 +96,17 @@ export class Employee {
 export class StaffedProject {
     public projectId: number;
     public joinDate: string;
+    public comment: string;
     public hourSpend: number;
     constructor(
         projectId: number,
         joinDate: string,
+        comment: string,
         hourSpend: number
     ) {
         this.projectId = projectId;
         this.joinDate = joinDate;
+        this.comment = comment;
         this.hourSpend = hourSpend
     }
 }

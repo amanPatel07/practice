@@ -1,1647 +1,1650 @@
 {
-    "departments": [
+  "departments": [
+    {
+      "id": 1,
+      "departmentName": "Frontend",
+      "leadName": "Ankur Patel",
+      "employee": [
         {
-            "id": 1,
-            "departmentName": "Frontend",
-            "leadName": "Ankur Patel",
-            "employee": [
-                {
-                    "employeeId": 1,
-                    "employeeName": "Rahul Singh",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 2,
-                    "employeeName": "Harsh Singh",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 9
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 3,
-                    "employeeName": "Aayush Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 20
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 4,
-                    "employeeName": "Manish Rajput",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 5
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 5,
-                    "employeeName": "Sagar Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 5
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 2
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 6,
-                    "employeeName": "Jigar Bhanushali",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 2
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 30
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 9
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 7,
-                    "employeeName": "Abhishek Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 6
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 8,
-                    "employeeName": "Viral Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 9,
-                    "employeeName": "Pooja Manvani",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 4
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 10,
-                    "employeeName": "Mrunal Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 32.6
-                        },
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 0.5
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 11,
-                    "employeeName": "Rahul Singh",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 2
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 0
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 12,
-                    "employeeName": "Ayushi Parmar",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 4
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 5
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 13,
-                    "employeeName": "Mehul Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 5
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 14,
-                    "employeeName": "Tanmay Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 15,
-                    "employeeName": "Rahul Singh",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 5
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 16,
-                    "employeeName": "Ankit Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 17,
-                    "employeeName": "Sushil Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 1
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 7
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 18,
-                    "employeeName": "Hiren Tandel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 3
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 2
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 19,
-                    "employeeName": "Kevang Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 5
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 20,
-                    "employeeName": "Jay Patel",
-                    "designation": "Trainee",
-                    "role": "UI Dev",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "joinDate": "",
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contactNumber": 9876543210,
-                    "email": "employee@mail.com"
-                }
-            ]
+          "employeeId": 1,
+          "employeeName": "Rahul Singh",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 2,
-            "departmentName": "Backend",
-            "leadName": "Bhavesh Patel",
-            "employee": [
-                {
-                    "employeeId": 1,
-                    "employeeName": "Harsh",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 2,
-                    "employeeName": "Harsh",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 3,
-                    "employeeName": "Harsh",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 4,
-                    "employeeName": "Harsh",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 5,
-                    "employeeName": "Harsh",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                }
-            ]
+          "employeeId": 2,
+          "employeeName": "Harsh Singh",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 9
+            },
+            {
+              "projectId": 1,
+              "joinDate": "2022-10-16",
+              "comment": "Comment",
+              "hourSpend": 1
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 3,
-            "departmentName": "Database",
-            "leadName": "Karan Patel",
-            "employee": [
-                {
-                    "employeeId": 1,
-                    "employeeName": "Aayush",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 2,
-                    "employeeName": "Aayush",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 3,
-                    "employeeName": "Aayush",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 4,
-                    "employeeName": "Aayush",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 5,
-                    "employeeName": "Aayush",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                }
-            ]
+          "employeeId": 3,
+          "employeeName": "Aayush Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 20
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 4,
-            "departmentName": "QA",
-            "leadName": "Dhaval Patel",
-            "employee": [
-                {
-                    "employeeId": 1,
-                    "employeeName": "Shivam",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 2,
-                    "employeeName": "Shivam",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 3,
-                    "employeeName": "Shivam",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 4,
-                    "employeeName": "Shivam",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 5,
-                    "employeeName": "Shivam",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                }
-            ]
+          "employeeId": 4,
+          "employeeName": "Manish Rajput",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 5
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 5,
-            "departmentName": "BA",
-            "leadName": "Rakesh Patel",
-            "employee": [
-                {
-                    "employeeId": 1,
-                    "employeeName": "Mayur",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 2,
-                    "employeeName": "Mayur",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 3,
-                    "employeeName": "Mayur",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 4,
-                    "employeeName": "Mayur",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                },
-                {
-                    "employeeId": 5,
-                    "employeeName": "Mayur",
-                    "designation": "Trainee",
-                    "staffProjectId": [
-                        {
-                            "projectId": 1,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 2,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 3,
-                            "hourSpend": 10
-                        },
-                        {
-                            "projectId": 4,
-                            "hourSpend": 10
-                        }
-                    ],
-                    "staffedModule": [
-                        1,
-                        2,
-                        3
-                    ],
-                    "isModuleLead": null,
-                    "contact": 9876543210,
-                    "email": "employee@mail.com"
-                }
-            ]
+          "employeeId": 5,
+          "employeeName": "Sagar Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 5
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 2
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 6,
+          "employeeName": "Jigar Bhanushali",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 2
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 30
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 9
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 7,
+          "employeeName": "Abhishek Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 6
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 8,
+          "employeeName": "Viral Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 9,
+          "employeeName": "Pooja Manvani",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 4
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 10,
+          "employeeName": "Mrunal Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 32.6
+            },
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 0.5
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 11,
+          "employeeName": "Rahul Singh",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 2
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 0
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 12,
+          "employeeName": "Ayushi Parmar",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 4
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 5
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 13,
+          "employeeName": "Mehul Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 5
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 14,
+          "employeeName": "Tanmay Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 15,
+          "employeeName": "Rahul Singh",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 5
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 16,
+          "employeeName": "Ankit Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 17,
+          "employeeName": "Sushil Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 1
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 7
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 18,
+          "employeeName": "Hiren Tandel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 3
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 2
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 19,
+          "employeeName": "Kevang Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 5
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 20,
+          "employeeName": "Jay Patel",
+          "designation": "Trainee",
+          "role": "UI Dev",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "",
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "joinDate": "",
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contactNumber": 9876543210,
+          "email": "employee@mail.com"
         }
-    ],
-    "projects": [
+      ]
+    },
+    {
+      "id": 2,
+      "departmentName": "Backend",
+      "leadName": "Bhavesh Patel",
+      "role": "Dev",
+      "employee": [
         {
-            "id": 1,
-            "projectName": "QUE FALL",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1
-                    ]
-                }
-            ]
+          "employeeId": 1,
+          "employeeName": "Harsh Patel",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 2,
-            "projectName": "RUN LIVE",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                }
-            ]
+          "employeeId": 2,
+          "employeeName": "Ankit Patel",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 3,
-            "projectName": "LINK PVT",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                }
-            ]
+          "employeeId": 3,
+          "employeeName": "Sushil Patel",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 4,
-            "projectName": "ARM LIVE",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                }
-            ]
+          "employeeId": 4,
+          "employeeName": "Karan Patel",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "id": 5,
-            "projectName": "MOD LTM",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "projectName": "AOT TEMP",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 7,
-            "projectName": "TEMP INC",
-            "projectStatus": "New",
-            "projectDesc": "Lorem",
-            "projectLeadId": 1,
-            "projectModules": [
-                {
-                    "id": 1,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 2,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectModuleName": "GTR-Product",
-                    "moduleLeadId": [
-                        1,
-                        2,
-                        3
-                    ]
-                }
-            ]
+          "employeeId": 5,
+          "employeeName": "Bhavesh Patel",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         }
-    ],
-    "pmList": [
+      ]
+    },
+    {
+      "id": 3,
+      "departmentName": "Database",
+      "leadName": "Karan Patel",
+      "employee": [
         {
-            "pmId": 1,
-            "pmName": "Ankur",
-            "pmContact": "pm.lead@mail.com",
-            "staffedProjectId": [
-                1,
-                2,
-                3,
-                4
-            ]
+          "employeeId": 1,
+          "employeeName": "Aayush",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "joinDate": "2022-10-14",
+              "comment": "Comment",
+              "hourSpend": 1
+            },
+            {
+              "projectId": 7,
+              "joinDate": "2022-09-18",
+              "comment": "Comment2\n",
+              "hourSpend": 3
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "pmId": 2,
-            "pmName": "Ankur",
-            "pmContact": "pm.lead@mail.com",
-            "staffedProjectId": [
-                1,
-                2,
-                3,
-                4
-            ]
+          "employeeId": 2,
+          "employeeName": "Aayush",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "pmId": 3,
-            "pmName": "Ankur",
-            "pmContact": "pm.lead@mail.com",
-            "staffedProjectId": [
-                1,
-                2,
-                3,
-                4
-            ]
+          "employeeId": 3,
+          "employeeName": "Aayush",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         },
         {
-            "pmId": 4,
-            "pmName": "Ankur",
-            "pmContact": "pm.lead@mail.com",
-            "staffedProjectId": [
-                1,
-                2,
-                3,
-                4
-            ]
+          "employeeId": 4,
+          "employeeName": "Aayush",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 5,
+          "employeeName": "Aayush",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
         }
-    ]
+      ]
+    },
+    {
+      "id": 4,
+      "departmentName": "QA",
+      "leadName": "Dhaval Patel",
+      "employee": [
+        {
+          "employeeId": 1,
+          "employeeName": "Shivam",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 2,
+          "employeeName": "Shivam",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 3,
+          "employeeName": "Shivam",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 4,
+          "employeeName": "Shivam",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 5,
+          "employeeName": "Shivam",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "departmentName": "BA",
+      "leadName": "Rakesh Patel",
+      "employee": [
+        {
+          "employeeId": 1,
+          "employeeName": "Mayur",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 2,
+          "employeeName": "Mayur",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 3,
+          "employeeName": "Mayur",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 4,
+          "employeeName": "Mayur",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        },
+        {
+          "employeeId": 5,
+          "employeeName": "Mayur",
+          "designation": "Trainee",
+          "staffProjectId": [
+            {
+              "projectId": 1,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 2,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 3,
+              "hourSpend": 10
+            },
+            {
+              "projectId": 4,
+              "hourSpend": 10
+            }
+          ],
+          "staffedModule": [
+            1,
+            2,
+            3
+          ],
+          "isModuleLead": null,
+          "contact": 9876543210,
+          "email": "employee@mail.com"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "projectName": "QUE FALL",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectName": "RUN LIVE",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectName": "LINK PVT",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectName": "ARM LIVE",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectName": "MOD LTM",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectName": "AOT TEMP",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectName": "TEMP INC",
+      "projectStatus": "New",
+      "projectDesc": "Lorem",
+      "projectLeadId": 1,
+      "projectModules": [
+        {
+          "id": 1,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 3,
+          "projectModuleName": "GTR-Product",
+          "moduleLeadId": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "pmList": [
+    {
+      "pmId": 1,
+      "pmName": "Ankur",
+      "pmContact": "pm.lead@mail.com",
+      "staffedProjectId": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pmId": 2,
+      "pmName": "Ankur",
+      "pmContact": "pm.lead@mail.com",
+      "staffedProjectId": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pmId": 3,
+      "pmName": "Ankur",
+      "pmContact": "pm.lead@mail.com",
+      "staffedProjectId": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pmId": 4,
+      "pmName": "Ankur",
+      "pmContact": "pm.lead@mail.com",
+      "staffedProjectId": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
 }

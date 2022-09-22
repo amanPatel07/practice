@@ -1,6 +1,9 @@
 
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { debounceTime, Subject } from 'rxjs';
+import { UtilityService } from 'src/app/shared/common-services/utility.service';
+import { Popup_Type } from 'src/app/shared/constants';
 import { Department, EmployeeDetails, StaffedProject } from '../../model';
 import { EmployeeListPresenterService } from '../employee-list-presenter/employee-list-presenter.service';
 
@@ -43,11 +46,15 @@ export class EmployeeListPresentationComponent implements OnInit {
   public get employeeList(): any {
     return this._employeeList;
   }
-  private _employeeList!: EmployeeDetails[];
+
+  private _employeeList!: any;
   private _employeeListOriginal!: EmployeeDetails[];
   public departmentName: any;
   public leadName!: string;
   public currentEmpHour!: number;
+  public searchText!: string;
+  public searchTextUpdate: Subject<any>;
+  public isSearchOn: boolean;
 
   /**
    * @name getThead 
@@ -71,27 +78,43 @@ export class EmployeeListPresentationComponent implements OnInit {
 
   @Output() openPopup: EventEmitter<any>
 
+  @Output() isSearch: EventEmitter<any>;
+
   public filterForm!: FormGroup
 
-  constructor(private cdr: ChangeDetectorRef, private _employeePresenter: EmployeeListPresenterService) {
+  constructor(private cdr: ChangeDetectorRef, private _employeePresenter: EmployeeListPresenterService, private _utilityService: UtilityService) {
     this.getEmployeeById = new EventEmitter();
     this.openOverlay = new EventEmitter();
     this.openPopup = new EventEmitter();
+    this.isSearch = new EventEmitter();
+    this.searchTextUpdate = new Subject();
+    this.isSearchOn = false;
   }
 
   ngOnInit(): void {
     this.filterForm = this._employeePresenter.buildForm();
     this.getEmployeeListById();
     this.getfilteredList();
+    this.prop();
   }
+
+  private prop() {
+    if (!this.searchText) {
+      this.isSearchOn = !this.isSearchOn;
+      this.searchTextUpdate.pipe(debounceTime(300)).subscribe((res) => {
+      this.isSearch.emit(this.isSearchOn);
+      this._utilityService.getSearchResult(this.searchText.split(' ').join('').toLowerCase(), this._departmentId)
+    })
+  }
+}
 
   /**
    * @name getEmployeeListById 
    * @description Get the empolyee list by the department ID.
    */
   private getEmployeeListById() {
-    this.getEmployeeById.emit(this._departmentId);
-  }
+  this.getEmployeeById.emit(this._departmentId);
+}
 
   /**
    * @name getTheadScroll
@@ -99,9 +122,9 @@ export class EmployeeListPresentationComponent implements OnInit {
    * @description To scroll horizontally by ElementRef native element
    */
   public getTheadScroll(event: any) {
-    const getBody: any = this.getTbody.nativeElement;
-    getBody.scrollLeft = event.target.scrollLeft;
-  }
+  const getBody: any = this.getTbody.nativeElement;
+  getBody.scrollLeft = event.target.scrollLeft;
+}
 
   /**
    * @name getTbodyScroll
@@ -109,9 +132,9 @@ export class EmployeeListPresentationComponent implements OnInit {
    * @description To scroll horizontally by ElementRef native element
    */
   public getTbodyScroll(event: any) {
-    const getHead: any = this.getThead.nativeElement;
-    getHead.scrollLeft = event.target.scrollLeft;
-  }
+  const getHead: any = this.getThead.nativeElement;
+  getHead.scrollLeft = event.target.scrollLeft;
+}
 
   /**
   * @name checkAvailability
@@ -120,50 +143,52 @@ export class EmployeeListPresentationComponent implements OnInit {
   * @returns Boolean
   */
   public checkAvailability(stafedDetails: StaffedProject[]) {
-    let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
-    let totalHours = list.reduce((perviousValue: number, currentValue: number) => perviousValue + currentValue);
-    this.currentEmpHour = totalHours;
-    if (totalHours >= 40) {
-      return true;
-    }
-    else {
-      return false
-    }
+  let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
+  let totalHours = list.reduce((perviousValue: number, currentValue: number) => perviousValue + currentValue);
+  this.currentEmpHour = totalHours;
+  if (totalHours >= 40) {
+    return true;
   }
+  else {
+    return false
+  }
+}
 
   /**
    * @name sort
    * @parameters The filterby value and the employee list.
    */
   public filter() {
-    this._employeePresenter.filter(this.filterForm.value, this._employeeListOriginal);
-  }
+  this._employeePresenter.filter(this.filterForm.value, this._employeeListOriginal);
+}
 
   /**
    * @name getSortedList
    * @description To get the filtered employee list
    */
   public getfilteredList() {
-    this._employeePresenter.sortedList$.subscribe((res: any) => {
-      this._employeeList = res
-    })
-  }
+  this._employeePresenter.sortedList$.subscribe((res: any) => {
+    this._employeeList = res
+  })
+}
 
   public addTo(employeeId: any, isStaffed: boolean, currentEmpName: string) {
-    let currentEmpHour = this.currentEmpHour;
-    let departmenrId = this.departmentId;
-    let currentEmp = {
-      employeeId,
-      departmenrId,
-      currentEmpHour,
-      currentEmpName
-    };
-    (!isStaffed) ? this.openOverlay.emit(currentEmp) : this.openPopup.emit(currentEmp.currentEmpName)
-  }
+  let currentEmpHour = this.currentEmpHour;
+  let departmenrId = this.departmentId;
+  console.log(departmenrId)
+  let currentEmp = {
+    employeeId,
+    departmenrId,
+    currentEmpHour,
+    currentEmpName
+  };
+  (!isStaffed) ? this.openOverlay.emit(currentEmp) : this.openPopup.emit(currentEmp.currentEmpName)
+}
 
-  public openAction(event:any){
-    console.log(event)
-  }
+  public openAction(event: any) {
+  let action = Popup_Type.ACTION_POPUP;
+  this.openPopup.emit({ event, action });
+}
 
 
 }

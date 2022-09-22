@@ -1,9 +1,15 @@
 <div class="d-flex flex-column bg-accent m-3">
-    <div class="p-5 bg-white">
-        <span class="text-muted fs-4 fw-bold"> {{ this.empName }} is staffed. </span>
-        <p>The employee is currently unavailable, as he/she occupied.</p>   
-    </div>
-    <div class="bg-info text-end p-3 border-3 border-top border-gray">
-        <button type="button" class="btn btn-light px-3 me-3" (click)="close()">Okay</button>
+    <!-- <div class="d-flex flex-column px-3 py-2 bg-light" *ngIf="isAction">
+        <button type="button" class="btn btn-light p-2">Edit</button>
+        <button type="button" class="btn btn-light p-2">Delete</button>
+    </div> -->
+    <div *ngIf="!isAction">
+        <div class="p-5 bg-white">
+            <span class="text-muted fs-4 fw-bold"> {{ this.event }} is staffed. </span>
+            <p>The employee is currently unavailable, as he/she occupied.</p>   
+        </div>
+        <div class="bg-info text-end p-3 border-3 border-top border-gray">
+            <button type="button" class="btn btn-light px-3 me-3" (click)="close()">Okay</button>
+        </div>
     </div>
 </div>

@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeListPresentationComponent } from './employee-list/employee-list-presentation/employee-list-presentation.component';
 import { EmployeeListService } from './employee-list.service';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     EmployeesRoutingModule,
-    SharedModule
+    SharedModule,
+    
   ],
   providers: [
     EmployeeListService,

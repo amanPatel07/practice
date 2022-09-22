@@ -15,8 +15,10 @@ import { EmployeeListService } from '../employee-list.service';
 export class EmployeeListComponent implements OnInit {
 
   public departmentId: any;
-  public deptid$: Observable<any> 
+  public deptid$: Observable<any>
   public employeeList$: Observable<any>;
+  public employee$: Observable<any>;
+  private isSerachOn: boolean;
 
   constructor(
     private _employeeService: EmployeeService,
@@ -25,23 +27,32 @@ export class EmployeeListComponent implements OnInit {
   ) {
     this.deptid$ = new Observable();
     this.employeeList$ = new Observable();
+    this.employee$ = new Observable();
+    this.isSerachOn = false;
   }
 
   ngOnInit(): void {
     this.deptid$ = this._employeeService.departmentId$;
   }
-  
+
   public getEmployeeById(id: any) {
-    this.employeeList$ = this._employeeListService.getEmployeesList(id)
+    this.employeeList$ = this._employeeListService.getEmployeesList(id);
   }
 
-  public openOverlay(details:any){
+  public openOverlay(details: any) {
     this._utilityService.openOverlayForm(details, Popup_Type.FORM_OVERLAY)
   }
 
-  public openPopup(event: any){
-    this._utilityService.openPopup(event, Popup_Type.INFO_POPUP);
+  public openPopup(event: any) {
+    if (event.action === Popup_Type.ACTION_POPUP) {
+      this._utilityService.openPopup(event, Popup_Type.ACTION_POPUP);
+    }
+    else {
+      this._utilityService.openPopup(event, Popup_Type.INFO_POPUP);
+    }
   }
 
-  
+  public getSearchResult(isSearchOn: any) {
+    this.isSerachOn = isSearchOn
+  }
 }

@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CommonService } from '../common-services/common.service';
 import { UtilityService } from '../common-services/utility.service';
-import { Employee, Project } from '../model';
+import { Department, Employee, Project } from '../model';
 
 @Component({
   selector: 'app-form-overlay',
@@ -52,15 +52,15 @@ export class FormOverlayComponent implements OnInit {
     this.getEmployeeById();
     this.getProject();
   }
-  
-  public props(){
+
+  public props() {
     this.hasAvailableTime = parseFloat((40 - this.details.currentEmpHour).toFixed(2));
     this.getControls['employeeName'].disable();
     this.getControls['email'].disable();
     this.getControls['contactNumber'].disable();
     this.getControls['designation'].disable();
   }
-  
+
   /**
    * @name formBuild
    * @description Create the form group
@@ -76,12 +76,12 @@ export class FormOverlayComponent implements OnInit {
       project: [],
       joinDate: [],
       projectStatus: [],
-      projectDesc: [],
+      comment: [],
       minHour: []
     })
   }
 
-  public get getControls(){
+  public get getControls() {
     return this.staffForm.controls;
   }
 
@@ -98,7 +98,7 @@ export class FormOverlayComponent implements OnInit {
    * @description Get the selected employee details
    */
   public getEmployeeById() {
-    this._commonService.getDepartmentById(this.details.departmenrId, this.details.employeeId).subscribe((res: any) => {
+    this._commonService.getEmployeeById(this.details.departmenrId, this.details.employeeId).subscribe((res: any) => {
       this.employeeName = res.employeeName;
       this.currentEmployee = res;
       this.staffForm.patchValue(this.currentEmployee);
@@ -115,21 +115,40 @@ export class FormOverlayComponent implements OnInit {
     })
   }
 
+  /**
+   * @name submit
+   * @description Update the employee details
+   */
   public submit() {
     let projectId = parseInt(this.staffForm.controls['project'].value);
     let hourSpend = this.getControls['minHour'].value;
     let joinDate = this.getControls['joinDate'].value;
-    this.currentEmployee.staffProjectId.push({projectId, hourSpend, joinDate});
+    let comment = this.getControls['comment'].value;
     this.getControls['project'].setValue(parseInt(this.staffForm.controls['project'].value))
-    console.log(this.currentEmployee);
-    console.log(this.staffForm.value);
+    this._commonService.getDepartmentById(this.details.departmenrId).subscribe((res: any) => {
+      this._updateEmployee(res, { projectId, joinDate, comment, hourSpend });
+    })
   }
-  
-  public reset(){
+
+  private _updateEmployee(res: any, obj: any) {
+    let department = { ...res };
+    let currentDepartment = [];
+    currentDepartment.push(department)
+    currentDepartment.forEach((item: any) => {
+      item.employee.find((el: any) => el.employeeId === this.currentEmployee.employeeId)
+        .staffProjectId
+        .push(obj)
+    })
+    this._commonService.updateEmployee(currentDepartment[0], this.details.departmenrId).subscribe(() => {
+      this.close();
+    })
+  }
+
+  public reset() {
     this.staffForm.reset();
     this.staffForm.patchValue(this.currentEmployee);
   }
 
-  
-  
+
+
 }

@@ -12,18 +12,15 @@
             <!-- Start: Sort by form -->
             <form [formGroup]="filterForm" class="sort-form d-flex flex-row bg-light rounded-pill" (change)="filter()">
                 <div>
-                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="all"
-                        value="all" [checked]="true">
+                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="all" value="all" [checked]="true">
                     <label class="sortby-form-label text-center px-2 py-1 rounded-pill" for="all">All</label>
                 </div>
                 <div class="px-2">
-                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="available"
-                        value="available">
+                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="available" value="available">
                     <label class="sortby-form-label text-center p-1 rounded-pill" for="available">Available</label>
                 </div>
                 <div>
-                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="staffed"
-                        value="staffed">
+                    <input formControlName="sortBy" class="sortby-form-item" type="radio" name="sortBy" id="staffed" value="staffed">
                     <label class="sortby-form-label text-center p-1 rounded-pill" for="staffed">Staffed</label>
                 </div>
             </form>
@@ -33,7 +30,7 @@
             <!-- Start: Search form -->
             <div class="input-group">
                 <span class="input-group-text icon-search" id="basic-addon1"></span>
-                <input type="text" class="form-control" placeholder="Search Employee">
+                <input type="text" class="form-control bg-light" placeholder="Search Employee" [(ngModel)]="searchText" (ngModelChange)="searchTextUpdate.next($event)">
             </div>
             <!-- End: Search form -->
         </div>
@@ -89,10 +86,10 @@
                             <td class="p-2 text-truncate">{{ employee.role }}</td>
                             <td class="p-2 text-truncate">{{ employee.email }}</td>
                             <td class="p-2 text-truncate">{{ employee.contactNumber }}</td>
-                            <td class="p-2">
-                                <span class="ps-4" (click)="openAction($event)" #cursorPosition appGetcursor>
+                            <td class="p-2 position-relative">
+                                <a class="ps-4" (click)="openAction($event)" #cursorPosition>
                                     ...
-                                </span>
+                                </a>
                             </td>
                         </tr>
                         <tr>
