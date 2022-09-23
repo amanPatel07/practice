@@ -30,7 +30,7 @@
             <!-- Start: Search form -->
             <div class="input-group">
                 <span class="input-group-text icon-search" id="basic-addon1"></span>
-                <input type="text" class="form-control bg-light" placeholder="Search Employee" [(ngModel)]="searchText" (ngModelChange)="searchTextUpdate.next($event)">
+                <input type="text" class="form-control bg-light" placeholder="Search Employee" [(ngModel)]="searchText" (ngModelChange)="[searchTextUpdate.next($event),emitSearch()]">
             </div>
             <!-- End: Search form -->
         </div>
@@ -57,7 +57,7 @@
         </div>
         <!-- End: Table Head -->
         <!-- Start: Table Body -->
-        <div id="tbody" class="d-flex flex-column flex-grow-1 overflow-auto" (scroll)="getTbodyScroll($event)"
+        <div id="tbody" class="d-flex flex-column flex-grow-1 overflow-auto" id="scroll-style" (scroll)="getTbodyScroll($event)"
             #getTbody>
             <div>
                 <table class="table mb-0">
@@ -96,9 +96,9 @@
                     </tbody>
                 </table>
             </div>
-            <!-- <div *ngIf="employeeList">
-                <p>No Record Found</p>
-            </div> -->
+            <div class="d-flex flex-grow-1 justify-content-center align-items-center" *ngIf="!employeeList">
+                <p class="fs-3 text-muted">No Record Found</p>
+            </div>
         </div>
         <!-- End: Table Body -->
     </div>

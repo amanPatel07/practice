@@ -18,7 +18,7 @@ export class EmployeeListComponent implements OnInit {
   public deptid$: Observable<any>
   public employeeList$: Observable<any>;
   public employee$: Observable<any>;
-  private isSerachOn: boolean;
+  private _id!: number;
 
   constructor(
     private _employeeService: EmployeeService,
@@ -28,7 +28,6 @@ export class EmployeeListComponent implements OnInit {
     this.deptid$ = new Observable();
     this.employeeList$ = new Observable();
     this.employee$ = new Observable();
-    this.isSerachOn = false;
   }
 
   ngOnInit(): void {
@@ -36,7 +35,9 @@ export class EmployeeListComponent implements OnInit {
   }
 
   public getEmployeeById(id: any) {
-    this.employeeList$ = this._employeeListService.getEmployeesList(id);
+    this._id = id.departmentId;
+    console.log(this._id, id.isSearchOn)
+    this.employeeList$ = this._employeeListService.getEmployeesList(this._id);
   }
 
   public openOverlay(details: any) {
@@ -52,7 +53,13 @@ export class EmployeeListComponent implements OnInit {
     }
   }
 
-  public getSearchResult(isSearchOn: any) {
-    this.isSerachOn = isSearchOn
+  public async getSearchResult(isSearchOn: any) {
+    if(isSearchOn){
+      this.employeeList$ = await this._utilityService.searchText$;
+    }
+    else{
+      debugger
+      this.employeeList$ = this._employeeListService.getEmployeesList(this._id)
+    }
   }
 }

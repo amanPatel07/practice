@@ -11,45 +11,371 @@
     </div>
     <!-- End: Add new Button -->
     <!-- Start: Listing Table -->
-    <div class="h-100 overflow-auto">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Lead/PM</th>
-                    <th>Module Lead/PM</th>
-                    <th>Project</th>
-                    <th>Staffing</th>
-                    <th>Frame Work/Tool</th>
-                    <th>CSS FrameWork</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th>Joining Date</th>
-                    <th>Release Date</th>
-                    <th>Comment</th>
+    <div class="d-flex flex-column overflow-auto scroll-bar" id="scroll-style">
+        <table class="table position-relative bg-secondary">
+            <thead class="table-thead">
+                <tr class="border-muted border-bottom text-lightgray fw-lighter">
+                    <th>No</th>
+                    <th>Thead Data</th>
+                    <th>Thead Data</th>
+                    <th>Thead Data</th>
+                    <th>Thead Data</th>
+                    <th>Thead Data</th>
+                    <th>Thead Data</th>
                 </tr>
             </thead>
-
             <tbody>
-                <tr *ngFor="let details of staff, let i = index">
-                    <td class="rounded">{{ i+1 }}</td>
-                    <td>{{ details.developerName }}</td>
-                    <td>{{ details.projectLead }}</td>
-                    <td>{{ details.moduleLead }}</td>
-                    <td>{{ details.project }}</td>
-                    <td>{{ details.staffing }}</td>
-                    <td>{{ details.frameWork }}</td>
-                    <td>{{ details.cssFramework }}</td>
-                    <td>{{ details.designation }}</td>
-                    <td>{{ details.status }}</td>
-                    <td>{{ details.joinDate }}</td>
-                    <td>{{ details.releaseDate }}</td>
-                    <td class="rounded">{{ details.comment }}</td>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
                 </tr>
-                <!-- <tr>
-                    <td colspan="13" *ngIf="!staff.length">No Record Found</td>
-                </tr> -->
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
+                <tr class="border-bottom border-white">
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                    <td>Tbody Data</td>
+                </tr>
             </tbody>
         </table>
     </div>

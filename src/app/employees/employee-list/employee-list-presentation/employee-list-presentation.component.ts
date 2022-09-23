@@ -36,10 +36,16 @@ export class EmployeeListPresentationComponent implements OnInit {
    */
   @Input() public set employeeList(value: Department | null) {
     if (value) {
-      this._employeeListOriginal = value['employee'];
-      this._employeeList = value['employee'];
-      this.departmentName = value['departmentName'];
-      this.leadName = value['leadName'];
+      if(this.searchText){
+        this._employeeList = value;
+        this.isSearchOn = !this.isSearchOn;
+      }
+      else{
+        this._employeeListOriginal = value['employee'];
+        this._employeeList = value['employee'];
+        this.departmentName = value['departmentName'];
+        this.leadName = value['leadName'];
+      }
     }
     return;
   }
@@ -99,22 +105,22 @@ export class EmployeeListPresentationComponent implements OnInit {
   }
 
   private prop() {
-    if (!this.searchText) {
-      this.isSearchOn = !this.isSearchOn;
-      this.searchTextUpdate.pipe(debounceTime(300)).subscribe((res) => {
-      this.isSearch.emit(this.isSearchOn);
+    this.isSearchOn = !this.isSearchOn;
+    this.searchTextUpdate.pipe(debounceTime(300)).subscribe(() => {
+      this.isSearchOn = !this.isSearchOn
       this._utilityService.getSearchResult(this.searchText.split(' ').join('').toLowerCase(), this._departmentId)
-    })
+    });
   }
-}
 
   /**
    * @name getEmployeeListById 
    * @description Get the empolyee list by the department ID.
    */
   private getEmployeeListById() {
-  this.getEmployeeById.emit(this._departmentId);
-}
+    let departmentId = this._departmentId;
+    let isSearchOn = this.isSearchOn;
+    this.getEmployeeById.emit({departmentId, isSearchOn});
+  }
 
   /**
    * @name getTheadScroll
@@ -122,9 +128,9 @@ export class EmployeeListPresentationComponent implements OnInit {
    * @description To scroll horizontally by ElementRef native element
    */
   public getTheadScroll(event: any) {
-  const getBody: any = this.getTbody.nativeElement;
-  getBody.scrollLeft = event.target.scrollLeft;
-}
+    const getBody: any = this.getTbody.nativeElement;
+    getBody.scrollLeft = event.target.scrollLeft;
+  }
 
   /**
    * @name getTbodyScroll
@@ -132,9 +138,9 @@ export class EmployeeListPresentationComponent implements OnInit {
    * @description To scroll horizontally by ElementRef native element
    */
   public getTbodyScroll(event: any) {
-  const getHead: any = this.getThead.nativeElement;
-  getHead.scrollLeft = event.target.scrollLeft;
-}
+    const getHead: any = this.getThead.nativeElement;
+    getHead.scrollLeft = event.target.scrollLeft;
+  }
 
   /**
   * @name checkAvailability
@@ -143,52 +149,56 @@ export class EmployeeListPresentationComponent implements OnInit {
   * @returns Boolean
   */
   public checkAvailability(stafedDetails: StaffedProject[]) {
-  let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
-  let totalHours = list.reduce((perviousValue: number, currentValue: number) => perviousValue + currentValue);
-  this.currentEmpHour = totalHours;
-  if (totalHours >= 40) {
-    return true;
+    let list = stafedDetails.map((item: StaffedProject) => item.hourSpend)
+    let totalHours = list.reduce((perviousValue: number, currentValue: number) => perviousValue + currentValue);
+    this.currentEmpHour = totalHours;
+    if (totalHours >= 40) {
+      return true;
+    }
+    else {
+      return false
+    }
   }
-  else {
-    return false
-  }
-}
 
   /**
    * @name sort
    * @parameters The filterby value and the employee list.
    */
   public filter() {
-  this._employeePresenter.filter(this.filterForm.value, this._employeeListOriginal);
-}
+    this._employeePresenter.filter(this.filterForm.value, this._employeeListOriginal);
+  }
 
   /**
    * @name getSortedList
    * @description To get the filtered employee list
    */
   public getfilteredList() {
-  this._employeePresenter.sortedList$.subscribe((res: any) => {
-    this._employeeList = res
-  })
-}
+    this._employeePresenter.sortedList$.subscribe((res: any) => {
+      this._employeeList = res
+    })
+  }
 
   public addTo(employeeId: any, isStaffed: boolean, currentEmpName: string) {
-  let currentEmpHour = this.currentEmpHour;
-  let departmenrId = this.departmentId;
-  console.log(departmenrId)
-  let currentEmp = {
-    employeeId,
-    departmenrId,
-    currentEmpHour,
-    currentEmpName
-  };
-  (!isStaffed) ? this.openOverlay.emit(currentEmp) : this.openPopup.emit(currentEmp.currentEmpName)
-}
+    let currentEmpHour = this.currentEmpHour;
+    let departmenrId = this.departmentId;
+    console.log(departmenrId)
+    let currentEmp = {
+      employeeId,
+      departmenrId,
+      currentEmpHour,
+      currentEmpName
+    };
+    (!isStaffed) ? this.openOverlay.emit(currentEmp) : this.openPopup.emit(currentEmp.currentEmpName)
+  }
 
   public openAction(event: any) {
-  let action = Popup_Type.ACTION_POPUP;
-  this.openPopup.emit({ event, action });
-}
+    let action = Popup_Type.ACTION_POPUP;
+    this.openPopup.emit({ event, action });
+  }
+
+  public emitSearch(){
+    this.isSearch.emit(this.isSearchOn)
+  }
 
 
 }

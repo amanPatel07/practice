@@ -1,8 +1,9 @@
 .table {
     table-layout: fixed;
     border-collapse: collapse;
-    tr{
-        th{
+
+    tr {
+        th {
             color: $gray;
             background-color: $white;
             font-size: $font-size-sm;
@@ -10,19 +11,22 @@
     }
 
     tr {
+
         th,
         td {
             width: 100px;
             text-overflow: ellipsis;
             background-color: $secondary;
         }
+
         .add-icon {
             width: 20px;
             padding: 0.5rem 0.5rem 0 0;
             color: $gray;
             cursor: pointer;
         }
-        .status-badge{
+
+        .status-badge {
             width: 40px;
             font-size: 0.75rem;
         }
@@ -33,12 +37,48 @@
     height: 0;
 }
 
-@each $key, $value in $status {
-    .status-#{$key}{
+
+.table-thead {
+
+    th,
+    td {
+        min-width: 150px;
+        position: sticky;
+        top: -1px;
+        z-index: 1;
+    }
+}
+
+@each $key,
+$value in $status {
+    .status-#{$key} {
         background-color: lighten($value, 0.5%);
         color: $white;
     }
-    .status-#{$key}{
+
+    .status-#{$key} {
         background-color: lighten($value, 0.5%);
     }
 }
+
+
+// Custom Scrollbar style
+// #scroll-style::-webkit-scrollbar-track
+// {
+// 	// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+// 	border-radius: 1px;
+// 	// background-color: #F5F5F5;
+// }
+
+// #scroll-style::-webkit-scrollbar
+// {
+// 	width: 2px;
+// 	// background-color: #F5F5F5;
+// }
+
+// #scroll-style::-webkit-scrollbar-thumb
+// {
+// 	border-radius: 10px;
+// 	// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+// 	background-color: $gray;
+// }
