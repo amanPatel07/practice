@@ -131,7 +131,7 @@ export class FormOverlayComponent implements OnInit {
   }
 
   private _updateEmployee(res: any, obj: any) {
-    let department = { ...res };
+    let department = {...res};
     let currentDepartment = [];
     currentDepartment.push(department)
     currentDepartment.forEach((item: any) => {

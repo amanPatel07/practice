@@ -23,7 +23,7 @@
             <ul class="nav dropDown flex-column" *ngIf="this.isDropDownOpen">
                 <li class="nav-item text-nowrap" *ngFor="let dept of this.departmentList" (click)="departmentId(dept.id)">
                     <a class="nav-link">
-                        <p class="nav-item-text ps-5 m-0">{{ dept.departmentName }}</p>
+                        <p class="nav-item-text ps-5 m-0" (click)="departmentId(dept.id)">{{ dept.departmentName }}</p>
                     </a>
                 </li>
             </ul>

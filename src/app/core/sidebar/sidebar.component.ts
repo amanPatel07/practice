@@ -1,5 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonService } from 'src/app/shared/common-services/common.service';
 import { EmployeeService } from '../services/employee.service';
 
@@ -15,7 +15,8 @@ export class SidebarComponent implements OnInit {
 
   constructor(
     private _employee: EmployeeService,
-    private _commonService: CommonService
+    private _commonService: CommonService,
+    private _router: Router
   ) {
     this.isDropDownOpen = false;
   }
