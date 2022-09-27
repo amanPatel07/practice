@@ -7,6 +7,10 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './services/login.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -14,13 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     SidebarComponent,
     HeaderComponent,
-    MasterComponent
+    MasterComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports:[
     MasterComponent,
@@ -28,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent
   ],
   providers: [
-    EmployeeService
+    EmployeeService,
+    LoginService
   ]
 })
 export class CoreModule { }

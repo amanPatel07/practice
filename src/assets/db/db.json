@@ -1,4 +1,10 @@
 {
+  "user": [
+    {
+      "userName": "aman@123",
+      "password": 123456
+    }
+  ], 
   "departments": [
     {
       "id": 1,
