@@ -4,16 +4,16 @@
         <h1 class="brand-title text-nowrap fs-5 m-0">Project Staffing</h1>
     </div>
     <!-- End: Brand Logo and Title -->
-    <div class="py-3">
+    <div class="d-flex flex-column flex-grow-1 justify-content-between py-3">
         <!-- Start: Sidebar Navbar -->
         <ul class="nav flex-column p-3">
             <li class="nav-item mb-2" routerLink="staff" routerLinkActive="active">
-                <a class="nav-link active d-flex align-items-center ps-2" >
+                <a class="nav-link active d-flex align-items-center ps-2">
                     <span class="nav-item-icon icon-ungroup"></span>
-                    <p class="nav-item-text ps-3 m-0">Staff</p>
+                    <p class="nav-item-text ps-3 m-0">Projects</p>
                 </a>
             </li>
-            <li class="nav-item" (click)="dropDown()" routerLink="employee"  routerLinkActive="active">
+            <li class="nav-item" (click)="dropDown()" routerLink="employee" routerLinkActive="active">
                 <a class="nav-link d-flex align-items-center ps-2">
                     <span class="nav-item-icon icon-users"></span>
                     <p class="nav-item-text ps-3 m-0">Employee</p>
@@ -21,7 +21,8 @@
             </li>
             <!-- Start: Drop Down menu -->
             <ul class="nav dropDown flex-column" *ngIf="this.isDropDownOpen">
-                <li class="nav-item text-nowrap" *ngFor="let dept of this.departmentList" (click)="departmentId(dept.id)">
+                <li class="nav-item text-nowrap" *ngFor="let dept of this.departmentList"
+                    (click)="departmentId(dept.id)">
                     <a class="nav-link">
                         <p class="nav-item-text ps-5 m-0" (click)="departmentId(dept.id)">{{ dept.departmentName }}</p>
                     </a>
@@ -31,11 +32,12 @@
             <li class="nav-item my-2">
                 <a class="nav-link d-flex align-items-center ps-2">
                     <span class="nav-item-icon icon-credit-card"></span>
-                    <p class="nav-item-text ps-3 m-0">Project</p>
+                    <p class="nav-item-text ps-3 m-0">Create New Project</p>
                 </a>
             </li>
         </ul>
         <!-- End: Sidebar Navbar -->
+        <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
     </div>
     <!-- Start: Brand Logo and Title -->
 </aside>

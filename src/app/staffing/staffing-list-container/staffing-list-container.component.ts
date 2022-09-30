@@ -8,14 +8,14 @@ import { StaffingService } from '../staffing.service';
 })
 export class StaffingListContainerComponent implements OnInit {
 
-  public staffDetails$: Observable<any>;
+  public projectList$: Observable<any>;
 
   constructor(private _service: StaffingService) {
-    this.staffDetails$ = new Observable();
+    this.projectList$ = new Observable();
   }
 
   ngOnInit(): void {
-    // this.staffDetails$ = this._service.getStaffDetails();
+    this.projectList$ = this._service.getProjectList();
   }
 
 

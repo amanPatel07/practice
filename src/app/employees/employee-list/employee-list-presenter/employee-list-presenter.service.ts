@@ -25,7 +25,7 @@ export class EmployeeListPresenterService {
   public filter(form: any, employeeList: EmployeeDetails[]) {
     let sortorder = form
     let list = employeeList.map((item: any) => item)
-    let sorted: EmployeeDetails[] = [];    
+    let sorted: EmployeeDetails[] = [];
     if (sortorder.sortBy === 'available') {
       list.forEach((element: any) => {
         let staffDetails = element.staffProjectId.map((item: any) => item.hourSpend)
@@ -46,7 +46,6 @@ export class EmployeeListPresenterService {
       })
       this._sortedList.next(sorted);
     }
-
     else {
       this._sortedList.next(list)
     }

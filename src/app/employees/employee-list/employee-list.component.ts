@@ -36,7 +36,6 @@ export class EmployeeListComponent implements OnInit {
 
   public getEmployeeById(id: any) {
     this._id = id.departmentId;
-    console.log(this._id, id.isSearchOn)
     this.employeeList$ = this._employeeListService.getEmployeesList(this._id);
   }
 
@@ -55,10 +54,9 @@ export class EmployeeListComponent implements OnInit {
 
   public async getSearchResult(isSearchOn: any) {
     if(isSearchOn){
-      this.employeeList$ = await this._utilityService.searchText$;
+      this.employeeList$ = this._utilityService.searchText$;
     }
     else{
-      debugger
       this.employeeList$ = this._employeeListService.getEmployeesList(this._id)
     }
   }

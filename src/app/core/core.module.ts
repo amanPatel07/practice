@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeaderComponent } from './header/header.component';
-import { MasterComponent } from './master/master.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
-import { EmployeeService } from './services/employee.service';
-import { HttpClientModule } from '@angular/common/http';
+import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
+import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { MasterComponent } from './master/master.component';
+import { EmployeeService } from './services/employee.service';
 import { LoginService } from './services/login.service';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from './services/auth.service';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
@@ -19,7 +19,8 @@ import { AuthService } from './services/auth.service';
     SidebarComponent,
     HeaderComponent,
     MasterComponent,
-    LoginComponent
+    LoginComponent,
+    AuthCallbackComponent
   ],
   imports: [
     CommonModule,

@@ -12,8 +12,8 @@ export class StaffingService {
     this._apiLink = environment.baseURL;
   }
 
-  // public getStaffDetails(): Observable<any>{
-  //   return this.http.get<any>(`${this._apiLink}/staffDetails`)
-  // }
+  public getProjectList(): Observable<any>{
+    return this.http.get<any>(`${this._apiLink}/projects`)
+  }
 
 }

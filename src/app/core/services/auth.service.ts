@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
@@ -11,7 +12,8 @@ export class AuthService {
   private _isloggedin: any
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private _route: Router
   ) {
     this._apiLink = environment.baseURL;
   }
@@ -32,28 +34,41 @@ export class AuthService {
 
   public async checkAuthentication(currentUser: any) {
     await this.getUser();
-    this._checkUser = await Promise.all(this._userList.map((item: any) => {
-      if ((item.userName === currentUser.userName) && (item.password == currentUser.password)) {
+    this._userList.map((item: any) => {
+      if((item.userName === currentUser.userName) && (item.password === parseInt(currentUser.password))){
         this._isloggedin = true;
-        return true;
+        localStorage.setItem('user', this._isloggedin);
       }
-      else {
+      else{
         this._isloggedin = false;
-        return false;
+        localStorage.setItem('user', this._isloggedin);
       }
-    }));
-    this.allowUser();
+    })
+    console.log(typeof(localStorage.getItem('user')))
   }
 
-  public async allowUser(){
-    await this._checkUser;
-    console.log(this._checkUser)
-    console.log(this._isloggedin)
-    return this._isloggedin;
+  public completeAuth(){
+    let userStatus = localStorage.getItem('user');
+    if(userStatus === 'true'){
+      this._route.navigate(['/'])
+    }
+    else{
+      this._route.navigate(['login'])
+    }
   }
-
-
-
-
-
 }
+
+// return await new Promise<void>((resolve, reject) => {
+//   this._userList.map((item: any) => {
+//     if ((item.userName === currentUser.userName) && (item.password === parseInt(currentUser.password))) {
+//       this._isloggedin = true;
+//       localStorage.setItem('user', this._isloggedin);
+//       resolve();
+//     }
+//     else {
+//       this._isloggedin = false;
+//       localStorage.setItem('user', this._isloggedin);
+//       reject();
+//     }
+//   });
+// });

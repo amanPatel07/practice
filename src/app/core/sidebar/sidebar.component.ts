@@ -38,5 +38,10 @@ export class SidebarComponent implements OnInit {
       this._employee.department(id);
   }
 
+  public logout(){
+    localStorage.removeItem('user');
+    this._router.navigate(['../../auth'])
+  }
+
 
 }

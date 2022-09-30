@@ -12,7 +12,7 @@ export class UtilityService {
 
   public overlayRef!: OverlayRef;
   public componentRef!: ComponentRef<any>;
-  
+
   private _searchText: Subject<any>;
   public searchText$: Observable<any>;
 
@@ -87,20 +87,24 @@ export class UtilityService {
   public getSearchResult(searchText: any, departmentId: any) {
     this._commonService.getDepartmentById(departmentId).subscribe((res) => {
       let employeeList = { ...res };
-      console.log(searchText.split(' ').join('').toLowerCase())
       let result = employeeList.employee.filter((item: any) =>
+        // this.transformText(item.employeeName, searchText) ||
+        // this.transformText(item.role, searchText) || 
+        // this.transformText(item.designation, searchText) ||
+        // this.transformText(item.email, searchText)
+
         item?.employeeName?.split(' ').join('').toLowerCase().includes(searchText) ||
         item?.role?.split(' ').join('').toLowerCase().includes(searchText) ||
         item?.designation?.split(' ').join('').toLowerCase().includes(searchText) ||
         item?.email?.split(' ').join('').toLowerCase().includes(searchText)
+
       );
       console.log(result)
       this._searchText.next(result);
     })
   }
 
-
-  public updateEmployee(){
-    
+  public transformText(text: any, searchText: any) {
+    return text?.split(' ').join('').toLowerCase().includes(searchText)
   }
 }

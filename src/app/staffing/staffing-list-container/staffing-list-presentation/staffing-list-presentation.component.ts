@@ -11,17 +11,17 @@ import { StaffingListPresenterService } from '../staffing-list-presenter/staffin
 })
 export class StaffingListPresentationComponent implements OnInit {
 
-  @Input() public set staffDetails(value: any | null) {
+  @Input() public set projectList(value: any | null) {
     if (value) {
-      this._staffDetails = value
+      this._projectList = value
     }
   }
 
-  public get staff() {
-    return this._staffDetails;
+  public get projectList() {
+    return this._projectList;
   }
 
-  private _staffDetails!: any;
+  private _projectList!: any;
 
   constructor(private formOverlay: StaffingListPresenterService) { }
 

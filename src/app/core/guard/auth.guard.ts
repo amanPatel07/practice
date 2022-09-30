@@ -1,34 +1,23 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthGuard implements CanActivate {
+@Injectable()
+export class AuthGuard implements CanActivateChild {
 
-  constructor(private _authService: AuthService) { }
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.checkAuthenicate();
+  constructor(private _authService: AuthService, private _route: Router) { }
+  canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    return this.checkAuthenicate()
   }
 
-  // canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    
-  // }
-
-
-  public async checkAuthenicate() {
-    let allow;
-    let isloggedIn = await this._authService.allowUser();
-    if(isloggedIn){
-      allow = true;
+  public checkAuthenicate() {
+    let userLogged = localStorage.getItem('user');
+    if(userLogged === 'true'){
+      return true;
     }
     else{
-      allow= false;
+      return false;
     }
-    return allow
   }
 }
