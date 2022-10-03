@@ -15,7 +15,7 @@
         <table class="table position-relative bg-secondary">
             <thead class="table-thead">
                 <tr class="border-muted border-bottom text-lightgray fw-lighter">
-                    <th>No</th>
+                    <th class="ps-5">No</th>
                     <th>Project Name</th>
                     <th>Project Status</th>
                     <th>Project Lead</th>
@@ -27,6 +27,7 @@
             <tbody>
                 <tr *ngFor="let item of projectList, let i = index" class="border-bottom border-white">
                     <td class="text-truncate">
+                        <span class="icon-circle-down pe-4 text-muted fs-6"></span>
                         {{ i + 1 }}
                     </td>
                     <td class="text-truncate fw-bold">
@@ -44,7 +45,7 @@
                     <td></td>
                     <td class="text-truncate">
                         {{ item.projectDesc }}
-                    </td>
+                    </td>                    
                 </tr>
             </tbody>
         </table>

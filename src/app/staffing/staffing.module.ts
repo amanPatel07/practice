@@ -9,13 +9,15 @@ import { StaffingListPresentationComponent } from './staffing-list-container/sta
 import { StaffingRoutingModule } from './staffing-routing.module';
 import { StaffingService } from './staffing.service';
 import { HttpClientModule } from '@angular/common/http';
+import { StaffFormPresentationComponent } from './staff-form-presentation/staff-form-presentation.component';
 
 @NgModule({
   declarations: [
     StaffingListContainerComponent,
     StaffingListPresentationComponent,
     StaffingFormContainerComponent,
-    StaffingFormPresentationComponent
+    StaffingFormPresentationComponent,
+    StaffFormPresentationComponent
   ],
   imports: [
     CommonModule,

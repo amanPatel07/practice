@@ -27,6 +27,7 @@ export class StaffingListPresentationComponent implements OnInit {
 
   ngOnInit(): void {
     // this.formOverlay.openForm();
+    this.addNew();
   }
 
   public addNew() {
