@@ -88,11 +88,6 @@ export class UtilityService {
     this._commonService.getDepartmentById(departmentId).subscribe((res) => {
       let employeeList = { ...res };
       let result = employeeList.employee.filter((item: any) =>
-        // this.transformText(item.employeeName, searchText) ||
-        // this.transformText(item.role, searchText) || 
-        // this.transformText(item.designation, searchText) ||
-        // this.transformText(item.email, searchText)
-
         item?.employeeName?.split(' ').join('').toLowerCase().includes(searchText) ||
         item?.role?.split(' ').join('').toLowerCase().includes(searchText) ||
         item?.designation?.split(' ').join('').toLowerCase().includes(searchText) ||

@@ -27,7 +27,7 @@
             <tbody>
                 <tr *ngFor="let item of projectList, let i = index" class="border-bottom border-white">
                     <td class="text-truncate">
-                        <span class="icon-circle-down pe-4 text-muted fs-6"></span>
+                        <span class="icon-plus pe-4 text-muted fs-6" (click)="addNew(item.id)"></span>
                         {{ i + 1 }}
                     </td>
                     <td class="text-truncate fw-bold">
@@ -42,7 +42,10 @@
                     <td class="text-truncate">
                         {{ item.projectModules.length }}
                     </td>
-                    <td></td>
+                    <td>
+                        {{ getEmployeeCount(item.id) }}
+                        <span class="ps-1">Developer/'s</span>
+                    </td>
                     <td class="text-truncate">
                         {{ item.projectDesc }}
                     </td>                    

@@ -21,17 +21,36 @@ export class StaffingListPresentationComponent implements OnInit {
     return this._projectList;
   }
 
-  private _projectList!: any;
-
-  constructor(private formOverlay: StaffingListPresenterService) { }
-
-  ngOnInit(): void {
-    // this.formOverlay.openForm();
-    this.addNew();
+  @Input() public set departmentList(value: any | null) {
+    if (value) {
+      value.forEach((item: any) => {
+        this._employeeList.push(item.employee)
+      });
+    }
+  }
+  public get departmentList(): any {
+    return this._employeeList;
   }
 
-  public addNew() {
-    this.formOverlay.openForm();
+  private _projectList!: any;
+  private _employeeList: any[];
+  public employeeNameList: any;
+
+  constructor(private _presenterService: StaffingListPresenterService) {
+    this._employeeList = [];
+  }
+
+  ngOnInit(): void {
+  }
+
+  public addNew(id?: any) {
+    this._presenterService.openForm(id, this.employeeNameList);
+  }
+
+  public getEmployeeCount(projectId: number) {
+    let result = this._presenterService.getEmployeeCountinProject(projectId, this._employeeList.flat());
+    this.employeeNameList = result.employeeNameList;
+    return result.employeeCount;
   }
 
 }

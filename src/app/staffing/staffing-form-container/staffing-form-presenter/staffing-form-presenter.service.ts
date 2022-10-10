@@ -22,25 +22,7 @@ export class StaffingFormPresenterService {
    */
   public formBuild() {
     return this.fb.group({
-      developerName: ['', Validators.required],
-      contactNumber: ['', Validators.required],
-      email: ['', Validators.required],
-      developerId: ['', Validators.required],
-      designation: ['', Validators.required],
-      firstForm: [''],
-      projectName: ['', Validators.required],
-      projectLead: ['', Validators.required],
-      moduleLead: ['', Validators.required],
-      description: ['', Validators.required],
-      staffing: ['', Validators.required],
-      secondForm: [''],
-      frameWork: ['', Validators.required],
-      cssFramework: ['', Validators.required],
-      joinDate: ['', Validators.required],
-      releaseDate: ['', Validators.required],
-      status: ['', Validators.required],
-      comment: ['', Validators.required],
-      thirdForm: ['']
+      
     })
   }
 

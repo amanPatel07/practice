@@ -1,0 +1,6 @@
+<app-staffing-form-presentation
+    [project] = "project$ | async"
+    [pmList] = "getPMList$ | async"
+    [employeeNameList] = "employeeList"
+    (closeOverlay) = "onCancel($event)"
+></app-staffing-form-presentation>
